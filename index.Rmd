@@ -1,0 +1,23 @@
+---
+title: ""
+output:
+  html_document:
+    toc: true
+    theme: sandstone
+    highlight: default
+---
+
+<br>
+<br>
+
+![](images/john.png) 
+
+<br>
+
+I'm currently a third year Ph.D. student in Economics at the University of Hawai'i at Manoa. My research interest focuses on resource and environmental economics. I'm currently working on climate models that provide insight into direct and belief effects of a changing climate.
+
+Feel free to contact me through email.
+
+A. John Woodill
+
+johnwoodill [at] gmail.com

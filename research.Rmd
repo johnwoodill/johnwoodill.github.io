@@ -1,0 +1,49 @@
+---
+title: ""
+output:
+  html_document:
+    theme: sandstone
+    highlight: default
+---
+
+<br>
+<br>
+
+
+
+Selected Papers
+----------------------
+
+*********
+
+* Woodill, A. J., Hemachandra, D., Nakamoto, S. T., & Leung, P. (2014). The Economics of Coffee Production in Hawai'i, (June),1-9.
+[[**url**]](http://www.ctahr.hawaii.edu/oc/freepubs/pdf/EI-25.pdf)
+
+* Richardson, G. M., Bowers, J., Woodill, a. J., Barr, J. R., Gawron, J. M., & Levine, R. a. (2014). Topic Models: A Tutorial with R. International Journal of Semantic Computing, 08(01), 85-98. [[**url**]](http://www.worldscientific.com/doi/abs/10.1142/S1793351X14500044?journalCode=ijsc)
+
+<br>
+<br>
+
+
+Working Papers
+----------------------
+
+*********
+
+####**Nonlinear Temperature Effects and Short-Run Adaptation of the Dust Bowl Region during the 1930s**####
+
+The Dust Bowl of the 1930s was one of the most significant environmental events in American history.
+Understanding the short-run adjustments from major weather events on agricultural yield can shed light on
+the economic impacts of changing weather conditions. Nonlinear temperature effects are examined in the
+Great Plains region of the US from 1910 - 1960 to identify changes in corn yield and short-run adaptation.
+Results show the Dust Bowl region had more harmful temperatures than the Northern Great Plains, but
+the temperature effect on corn yields were similar in each region; however, total corn yields from 1910-1960
+were less in the Dust Bowl region. Nonlinear estimation results show slight adaptation in the Dust Bowl
+region and no adaptation in the Northern region. Adaptation appears to be limited in the short-run even
+with the introduction of hybrid corn and changing farming practices. Precipitation also appears to play less
+of a role on crop yields. These results add a historical perspective to the issue of short-run adaptation due
+to extreme weather events.
+
+
+
+

@@ -1,0 +1,26 @@
+name: "my-website"
+output_dir: "."
+navbar:
+  title: "A. JOHN WOODILL"
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+    - text: "CV"
+      icon: fa-file
+      href: cv.html
+    - text: "Research"
+      icon: fa-globe
+      href: research.html
+    - text: "Code"
+      icon: fa-code
+      href: code.html
+    - text: "Github"
+      icon: fa-git
+      href: http://www.github.com/johnwoodill/
+    - text: "Google Scholar"
+      icon: fa-graduation-cap
+      href: https://scholar.google.com/citations?user=FOD51c4AAAAJ&hl=en
+    - text: "About"
+      icon: fa-info
+      href: about.html
