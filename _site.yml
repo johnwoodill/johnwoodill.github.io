@@ -16,9 +16,9 @@ navbar:
       icon: fa-code
       href: code.html
     - text: "Blog"
-      icon: fa-blog
+      icon: fa-pencil
       href: http://johnwoodill.blogspot.com
-    - text: "Github"
+    - text: "hub"
       icon: fa-git
       href: http://www.github.com/johnwoodill/
     - text: "Google Scholar"
