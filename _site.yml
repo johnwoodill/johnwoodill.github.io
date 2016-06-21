@@ -15,12 +15,12 @@ navbar:
     - text: "Code"
       icon: fa-code
       href: code.html
+    - text: "Blog"
+      icon: fa-blog
+      href: http://johnwoodill.blogspot.com
     - text: "Github"
       icon: fa-git
       href: http://www.github.com/johnwoodill/
     - text: "Google Scholar"
       icon: fa-graduation-cap
       href: https://scholar.google.com/citations?user=FOD51c4AAAAJ&hl=en
-    - text: "About"
-      icon: fa-info
-      href: about.html
