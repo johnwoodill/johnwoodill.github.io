@@ -46,6 +46,12 @@ to extreme weather events.
 
 * [Replication Content](https://github.com/johnwoodill/Non-Linear-Temperature-Effects-of-the-Dust-Bowl)
 
+####**Optimal spraying and harvesting strategies to combat CBB in Hawaii: A dynamic approach**
+
+The arrival of the coffee berry borer (CBB) to Hawaii in 2010 has had a major impact on Hawaii coffee production. Many farms have shut down, processors are rejecting cherry with high levels of infestation, and farmers have had to adopt new farming practices, such as pesticide spraying, to reduce the damage done by this invasive species. To understand the optimal spraying and harvest strategies for a farm with CBB we first estimate the economic damages by modeling CBB infestation levels using a time-inhomogenous Markov chain. When a farmer decides to spray they reduce their infestation level, thus reducing economic damage but at a cost. We then develop a forward-recursion dynamic programming model to maximize the net benefit of a farmer to define the optimal spraying pattern and harvest strategy for a season. We plan to use our model to test strategies for different farm sizes based on integrated management practices, the impact of CBB infestation level changes from weather, and policy decisions, such as the impact of state-level subsidies.
+
+* [Replication Content](https://github.com/johnwoodill/cbb-dynamic-model)
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
