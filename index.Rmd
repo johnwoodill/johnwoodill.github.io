@@ -14,7 +14,7 @@ output:
 
 <br>
 
-I'm currently a third year Ph.D. student in Economics at the University of Hawai'i at Manoa. My research interest focuses on resource and environmental economics. I'm currently working on climate models that provide insight into direct and belief effects of a changing climate.
+I'm currently a Ph.D. candidate in the Department of Economics at the University of Hawai'i at Manoa. My research interest focuses on environmental and resource economics. In particular, I'm interested in climate change and measuring adaptation through statistical models akin to Schlenker, Roberts, and Burke. 
 
 Feel free to contact me through email.
 
