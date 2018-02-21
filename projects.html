@@ -261,8 +261,10 @@ $(document).ready(function () {
 <hr />
 </div>
 <div id="fine-scale-weather-data-from-1900-2013" class="section level2">
-<h2><strong>Fine Scale Weather Data from 1900-2013</strong></h2>
+<h2><strong><a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Fine Scale Weather Data from 1900-2013</a></strong></h2>
 <p><img src="https://img.shields.io/R/v3.2.3.png?color=red" /> <img src="https://img.shields.io/build/passing.png?color=brightgreen" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
+<hr />
+<p><a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Project Link:</a></p>
 </div>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
@@ -270,16 +272,15 @@ $(document).ready(function () {
 <p>Degree days and time in each degree provides a measure of looking at temperature effects during the day. Degree days can be defined as the amount of time during a day that the environment is exposed to a threshold of temperature. For example, suppose for half of the day it is 30C. A simple calculation of degree days above 25°C would involve 5 degrees for half of a day, so for that particular day the degree days above 25°C would be 2.5. The exposure during the day becomes longer as it becomes warmer or shorter if it is cooler. Time in each degree is similiar in definition, but instead each degree gets a time interval. Time in each degree is defined as the length of heat exposure to each one-degree Celsisus temperature interval in each day. (See Synyder 1985)</p>
 <p>Daily minimum and maximum weather data is needed in order to calculate these two variables. More importantly, gridded data (2.5 x 2.5 miles) provides an accurate relationship to regions and are generally thought of as more precise than using zip codes. This data is not available for the suggested time period so an interpolation technique is used to get to daily data using monthly data. Calculations of degree days and time in each degree can then be extracted using the necessary mathmatical technique.</p>
 <p>Using daily data available from the National Climatic Data Center (NCDC: <a href="http://www.ncdc.noaa.gov/" class="uri">http://www.ncdc.noaa.gov/</a>) for various weather stations and PRISM (<a href="http://www.prism.oregonstate.edu/" class="uri">http://www.prism.oregonstate.edu/</a>) data that provides monthly data on a grid a relatively anomaly spline interpolation technique is used to build fine scale weather data on a 2.5 x 2.5 mile grid scale.</p>
-<p>The main idea behind building gridded data is to use the monthly temperatures from PRISM, place them at the midpoint (15th day) of each month for each year, and run a spline through each midpoint for each month of each day for each grid. This will in turn produce fine scale gridded daily data. Next, find the relative anamoly where R = NCDC(month) / PRISM(month). Finally, use Inverse Distance Weighting (IDW) to find the 5 closest NCDC stations for each PRISM grid to weight the temperature changes and apply the relative anamoly to this weighted temperature. This will produce gridded 2.5 x 2.5 mile daily data that is between the PRISM and NCDC data. For a simplegit example in R see <a href="interpolation%20technique.pdf">Interpolation Technique</a></p>
-<ul>
-<li><a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Project Code Base:</a></li>
-</ul>
+<p>The main idea behind building gridded data is to use the monthly temperatures from PRISM, place them at the midpoint (15th day) of each month for each year, and run a spline through each midpoint for each month of each day for each grid. This will in turn produce fine scale gridded daily data. Next, find the relative anamoly where R = NCDC(month) / PRISM(month). Finally, use Inverse Distance Weighting (IDW) to find the 5 closest NCDC stations for each PRISM grid to weight the temperature changes and apply the relative anamoly to this weighted temperature. This will produce gridded 2.5 x 2.5 mile daily data that is between the PRISM and NCDC data. For a simplegit example in R see <a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation/raw/master/Documentation/interpolation_technique.pdf">Interpolation Technique</a></p>
 <p><br> <br></p>
 <hr />
 </div>
 <div id="r-package-nonlineartemp" class="section level2">
-<h2><strong>R-package: NonlinearTemp</strong></h2>
+<h2><strong><a href="https://github.com/johnwoodill/NonlinearTemp">R-package: NonlinearTemp:</a></strong></h2>
+<hr />
 <p><img src="https://img.shields.io/build/passing.png?color=brightgreen" /> <img src="https://img.shields.io/R/v3.4.3.png?color=red" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
+<p><a href="https://github.com/johnwoodill/NonlinearTemp">Project Link:</a></p>
 </div>
 <div id="overview-1" class="section level2">
 <h2>Overview</h2>
