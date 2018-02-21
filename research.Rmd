@@ -16,10 +16,15 @@ Selected Papers
 
 *********
 
-**Woodill, A. J.**, Hemachandra, D., Nakamoto, S. T., & Leung, P. (2014). The Economics of Coffee Production in Hawai'i, (June),1-9.
-[[**url**]](http://www.ctahr.hawaii.edu/oc/freepubs/pdf/EI-25.pdf)
+**Woodill, A. J.**, Nakamoto, S. T., Kawabata, A. M., & Leung, P. (2017). To Spray or Not to Spray: A Decision Analysis of Coffee Berry Borer in Hawaii. 
 
-Richardson, G. M., Bowers, J., **Woodill, A. J.**, Barr, J. R., Gawron, J. M., & Levine, R. a. (2014). Topic Models: A Tutorial with R. International Journal of Semantic Computing, 08(01), 85-98. [[**url**]](http://www.worldscientific.com/doi/abs/10.1142/S1793351X14500044?journalCode=ijsc)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Insects, 8(4), 116. [[**link**]](http://www.mdpi.com/2075-4450/8/4/116)
+
+**Woodill, A. J.**, Hemachandra, D., Nakamoto, S. T., & Leung, P. (2014). The Economics of Coffee Production in Hawai'i, (June),1-9. [[**link**]](http://www.ctahr.hawaii.edu/oc/freepubs/pdf/EI-25.pdf)
+
+Richardson, G. M., Bowers, J., **Woodill, A. J.**, Barr, J. R., Gawron, J. M., & Levine, R. a. (2014). Topic Models: A Tutorial with R. International Journal  
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of Semantic Computing, 08(01), 85-98. [[**link**]](http://www.worldscientific.com/doi/abs/10.1142/S1793351X14500044?journalCode=ijsc)
 
 <br>
 <br>
