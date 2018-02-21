@@ -44,7 +44,7 @@ The main idea behind building gridded data is to use the monthly temperatures fr
 
 *********
 
-## **[R-package: NonlinearTemp:](https://github.com/johnwoodill/NonlinearTemp)**
+## **[R-package: NonlinearTemp](https://github.com/johnwoodill/NonlinearTemp)**
 
 *********
 
