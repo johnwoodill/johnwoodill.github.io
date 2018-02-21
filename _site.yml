@@ -6,9 +6,15 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
+    - text: "Tech. Resume"
+      icon: fa-file
+      href: tech_resume.html
     - text: "CV"
       icon: fa-file
       href: cv.html
+    - text: "Projects"
+      icon: fa-globe
+      href: projects.html
     - text: "Research"
       icon: fa-globe
       href: research.html
