@@ -262,7 +262,7 @@ $(document).ready(function () {
 </div>
 <div id="fine-scale-weather-data-from-1900-2013" class="section level2">
 <h2><strong><a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Fine Scale Weather Data from 1900-2013</a></strong></h2>
-<p><img src="https://img.shields.io/R/v3.2.3.png?color=red" /> <img src="https://img.shields.io/build/passing.png?color=brightgreen" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
+<p><img src="https://img.shields.io/build/passing.png?color=brightgreen" /> <img src="https://img.shields.io/R/v3.2.3.png?color=red" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
 <hr />
 <p><a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Project Link:</a></p>
 </div>
@@ -276,15 +276,15 @@ $(document).ready(function () {
 <p><br> <br></p>
 <hr />
 </div>
-<div id="r-package-nonlineartemp" class="section level2">
-<h2><strong><a href="https://github.com/johnwoodill/NonlinearTemp">R-package: NonlinearTemp</a></strong></h2>
+<div id="r-package-nonlineartempr" class="section level2">
+<h2><strong><a href="https://github.com/johnwoodill/nonlineartempr">R-package: nonlineartempr</a></strong></h2>
 <hr />
 <p><img src="https://img.shields.io/build/passing.png?color=brightgreen" /> <img src="https://img.shields.io/R/v3.4.3.png?color=red" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
-<p><a href="https://github.com/johnwoodill/NonlinearTemp">Project Link:</a></p>
+<p><a href="https://github.com/johnwoodill/nonlineartempr">Project Link:</a></p>
 </div>
 <div id="overview-1" class="section level2">
 <h2>Overview</h2>
-<p>NonlinearTemp calculates nonlinear temperature distributions using an integrated sine technique. Degree days define time above a specified temperature threshold (e.g. degree days above 30C) and time in each degree define time within a specified temperature threshold (e.g. time in 30C).</p>
+<p><code>nonlineartempr</code> calculates nonlinear temperature distributions using an integrated sine technique. Degree days define time above a specified temperature threshold (e.g. degree days above 30C) and time in each degree define time within a specified temperature threshold (e.g. time in 30C).</p>
 <ul>
 <li><code>degree_days()</code>: calculates degree days within a specified thresholds</li>
 <li><code>degree_time()</code>: calculates time in each degree at one degree intervals within a specified thresholds.</li>
@@ -295,7 +295,128 @@ $(document).ready(function () {
 <pre class="r"><code># Install through devtools:install_github()
 
 # install.packages(&quot;devtools&quot;)
-devtools::install_github(&quot;johnwoodill/NonlinearTemp&quot;)</code></pre>
+devtools::install_github(&quot;johnwoodill/nonlineartempr&quot;)</code></pre>
+</div>
+<div id="usage" class="section level2">
+<h2>Usage</h2>
+<pre class="r"><code>library(nonlineartempr)
+
+# Load Napa County, CA data
+data(napa)
+
+# Degree Days
+dd_napa &lt;- degree_days(napa, thresholds = c(0:35))
+head(dd_napa)
+        date year month day fips      county state  lat   long    tmax   tmin    tavg  dday0C  dday1C
+#&gt; 1 1899-12-15 1899    12  15 6055 Napa County    CA 38.5 -122.5 12.5000 4.1100 8.30500 8.30500 7.30500
+#&gt; 2 1899-12-16 1899    12  16 6055 Napa County    CA 38.5 -122.5 12.5445 4.2894 8.41695 8.41695 7.41695
+#&gt; 3 1899-12-17 1899    12  17 6055 Napa County    CA 38.5 -122.5 12.5878 4.4574 8.52260 8.52260 7.52260
+#&gt; 4 1899-12-18 1899    12  18 6055 Napa County    CA 38.5 -122.5 12.6298 4.6144 8.62210 8.62210 7.62210
+#&gt; 5 1899-12-19 1899    12  19 6055 Napa County    CA 38.5 -122.5 12.6706 4.7604 8.71550 8.71550 7.71550
+#&gt; 6 1899-12-20 1899    12  20 6055 Napa County    CA 38.5 -122.5 12.7103 4.8959 8.80310 8.80310 7.80310
+#&gt;    dday2C  dday3C  dday4C  dday5C  dday6C  dday7C  dday8C  dday9C dday10C dday11C dday12C dday13C
+#&gt; 1 6.30500 5.30500 4.30500 3.42938 2.69499 2.05296 1.49134 1.00618 0.59837 0.27430 0.05212       0
+#&gt; 2 6.41695 5.41695 4.41695 3.50622 2.75479 2.10052 1.52902 1.03544 0.62019 0.28919 0.05975       0
+#&gt; 3 6.52260 5.52260 4.52260 3.58250 2.81355 2.14717 1.56600 1.06423 0.64173 0.30402 0.06757       0
+#&gt; 4 6.62210 5.62210 4.62210 3.65817 2.87108 2.19273 1.60214 1.09242 0.66291 0.31871 0.07553       0
+#&gt; 5 6.71550 5.71550 4.71550 3.73325 2.92721 2.23709 1.63735 1.11996 0.68369 0.33324 0.08359       0
+#&gt; 6 6.80310 5.80310 4.80310 3.80821 2.98185 2.28020 1.67162 1.14683 0.70407 0.34760 0.09174       0
+#&gt; ...
+
+# Time in each degree
+td_napa &lt;- degree_time(napa, thresholds = c(0:35))
+head(td_napa)
+
+#&gt;         date year month day fips      county state  lat   long    tmax   tmin tdegree0C tdegree1C
+#&gt; 1 1899-12-15 1899    12  15 6055 Napa County    CA 38.5 -122.5 12.5000 4.1100         0         0
+#&gt; 2 1899-12-16 1899    12  16 6055 Napa County    CA 38.5 -122.5 12.5445 4.2894         0         0
+#&gt; 3 1899-12-17 1899    12  17 6055 Napa County    CA 38.5 -122.5 12.5878 4.4574         0         0
+#&gt; 4 1899-12-18 1899    12  18 6055 Napa County    CA 38.5 -122.5 12.6298 4.6144         0         0
+#&gt; 5 1899-12-19 1899    12  19 6055 Napa County    CA 38.5 -122.5 12.6706 4.7604         0         0
+#&gt; 6 1899-12-20 1899    12  20 6055 Napa County    CA 38.5 -122.5 12.7103 4.8959         0         0
+#&gt;   tdegree2C tdegree3C tdegree4C tdegree5C tdegree6C tdegree7C tdegree8C tdegree9C tdegree10C tdegree11C
+#&gt; 1         0         0   0.02960   0.07636   0.07794   0.08090   0.08576   0.09359    0.10704    0.13481
+#&gt; 2         0         0   0.01624   0.07745   0.07889   0.08172   0.08645   0.09412    0.10727    0.13413
+#&gt; 3         0         0   0.00334   0.07853   0.07981   0.08251   0.08711   0.09462    0.10749    0.13350
+#&gt; 4         0         0   0.00000   0.07048   0.08070   0.08327   0.08774   0.09509    0.10769    0.13292
+#&gt; 5         0         0   0.00000   0.05961   0.08155   0.08399   0.08833   0.09553    0.10786    0.13237
+#&gt; 6         0         0   0.00000   0.04926   0.08235   0.08467   0.08888   0.09593    0.10801    0.13183
+#&gt; ...
+</code></pre>
+<hr />
+</div>
+<div id="python-package-nonlineartemppy" class="section level2">
+<h2><strong><a href="https://github.com/johnwoodill/nonlineartemppy">python-package: nonlineartemppy</a></strong></h2>
+<hr />
+</div>
+<div id="nonlineartemppy" class="section level2">
+<h2>nonlineartemppy</h2>
+<p><img src="https://img.shields.io/build/passing.png?color=brightgreen" /> <img src="https://img.shields.io/pypi/v0.101.png?color=brightgreen" /> <img src="https://img.shields.io/python/v3.6.png?color=blue" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
+</div>
+<div id="overview-2" class="section level2">
+<h2>Overview</h2>
+<p><code>nonlineartemppy</code> calculates nonlinear temperature distributions using an integrated sine technique. Degree days define time above a specified temperature threshold (e.g. degree days above 30C) and time in each degree define time within a specified temperature threshold (e.g. time in 30C).</p>
+<ul>
+<li><code>degree_days()</code>: calculates degree days within a specified thresholds</li>
+<li><code>degree_time()</code>: calculates time in each degree at one degree intervals within a specified thresholds.</li>
+</ul>
+</div>
+<div id="installation-1" class="section level2">
+<h2>Installation</h2>
+<pre class="python"><code># Install through pip
+pip install nonlineartemppy</code></pre>
+</div>
+<div id="usage-1" class="section level2">
+<h2>Usage</h2>
+<pre class="python"><code>import numpy as np
+import pandas as pd
+import nonlineartemppy.calculations as nltemp
+import io
+import pkgutil
+
+# Import Napa data set
+data = pkgutil.get_data(&#39;nonlineartemppy&#39;, &#39;data/napa.csv&#39;)
+napa = pd.read_csv(io.BytesIO(data), encoding=&#39;utf8&#39;, sep=&quot;,&quot;, dtype={&quot;switch&quot;: np.int8})
+napa = pd.DataFrame(napa)
+
+# Degree Days
+dd_napa = nltemp.degree_days(napa, range(0,5))
+
+dd_napa.head()
+
+         date    year  month  day  fips       county state   lat   long  \
+0  1899-12-15  1899.0     12   15  6055  Napa County    CA  38.5 -122.5   
+1  1899-12-16  1899.0     12   16  6055  Napa County    CA  38.5 -122.5   
+2  1899-12-17  1899.0     12   17  6055  Napa County    CA  38.5 -122.5   
+3  1899-12-18  1899.0     12   18  6055  Napa County    CA  38.5 -122.5   
+4  1899-12-19  1899.0     12   19  6055  Napa County    CA  38.5 -122.5   
+
+      tmax    tmin     tavg   dday0C   dday1C   dday2C   dday3C   dday4C  
+0  12.5000  4.1100  8.30500  8.30500  7.30500  6.30500  5.30500  4.30500  
+1  12.5445  4.2894  8.41695  8.41695  7.41695  6.41695  5.41695  4.41695  
+2  12.5878  4.4574  8.52260  8.52260  7.52260  6.52260  5.52260  4.52260  
+3  12.6298  4.6144  8.62210  8.62210  7.62210  6.62210  5.62210  4.62210  
+4  12.6706  4.7604  8.71550  8.71550  7.71550  6.71550  5.71550  4.71550  
+
+
+# Time in each degree
+td_napa = nltemp.degree_time(napa, range(0,5))
+td_napa.head()
+
+         date    year  month  day  fips       county state   lat   long  \
+0  1899-12-15  1899.0     12   15  6055  Napa County    CA  38.5 -122.5   
+1  1899-12-16  1899.0     12   16  6055  Napa County    CA  38.5 -122.5   
+2  1899-12-17  1899.0     12   17  6055  Napa County    CA  38.5 -122.5   
+3  1899-12-18  1899.0     12   18  6055  Napa County    CA  38.5 -122.5   
+4  1899-12-19  1899.0     12   19  6055  Napa County    CA  38.5 -122.5   
+
+      tmax    tmin  tdegree0C  tdegree1C  tdegree2C  tdegree3C  tdegree4C  
+0  12.5000  4.1100        0.0        0.0        0.0        0.0    0.02960  
+1  12.5445  4.2894        0.0        0.0        0.0        0.0    0.01624  
+2  12.5878  4.4574        0.0        0.0        0.0        0.0    0.00334  
+3  12.6298  4.6144        0.0        0.0        0.0        0.0    0.00000  
+4  12.6706  4.7604        0.0        0.0        0.0        0.0    0.00000 
+</code></pre>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
