@@ -11,7 +11,7 @@ output:
 
 [Download (PDF) ](images/AJohnWoodill_techresume.pdf)
 
-![](images/AJohnWoodill_techresume_02212018-1.jpg)
+![](images/AJohnWoodill_techresume-1.jpg)
 
 
 <script>
