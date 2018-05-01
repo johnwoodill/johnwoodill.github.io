@@ -18,7 +18,6 @@ Data Science Projects
 
 ## **[Fine Scale Weather Data from 1900-2013](https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation)**
 
-<!-- ![](https://img.shields.io/build/passing.png?color=brightgreen) -->
 ![](https://img.shields.io/R/v3.2.3.png?color=red)
 ![](https://img.shields.io/license/MIT.png?color=blue)
 
@@ -48,7 +47,7 @@ The main idea behind building gridded data is to use the monthly temperatures fr
 
 *********
 
-<!-- ![](https://img.shields.io/build/passing.png?color=brightgreen) -->
+
 ![](https://img.shields.io/R/v3.4.3.png?color=red)
 ![](https://img.shields.io/license/MIT.png?color=blue)
 
@@ -129,7 +128,7 @@ head(td_napa)
 ## nonlineartemppy
 
 
-<!-- ![](https://img.shields.io/build/passing.png?color=brightgreen) -->
+
 ![](https://img.shields.io/pypi/v0.101.png?color=brightgreen)
 ![](https://img.shields.io/python/v3.6.png?color=blue)
 ![](https://img.shields.io/license/MIT.png?color=blue)
