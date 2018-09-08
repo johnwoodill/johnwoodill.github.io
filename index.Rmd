@@ -14,7 +14,13 @@ output:
 
 <br>
 
-I'm currently a Ph.D. candidate in the Department of Economics at the University of Hawai'i at Manoa. My research interest focuses on environmental and resource economics. In particular, I'm interested in climate change and measuring adaptation through statistical models akin to Schlenker, Roberts, and Burke. 
+I'm currently a Ph.D. Candidate in the Department of Economics at the University of Hawai'i at Manoa. My primary research interest focuses on the economic impact of climate change on agriculture. I have extensive experience modeling and predicting crop yield, revenue, and acres using historical weather/climate data (degree days and time in each degree) and farm-level data, such as available water, soil permeability, and soil class. I'm also familiar with machine/deeping learning technics. Two of my more recent projects include building a Neural Networks to predict crop yield and a Recurrent Neural Networks to predict commodity prices.
+
+Check out the links at the top of the page to learn more about my interests and experiences.
+
+[Technical Resume - Download (PDF) ](images/AJohnWoodill_techresume.pdf)
+
+[Curriculum Vitae - Download (PDF) ](images/AJohnWoodill_CV.pdf)
 
 Feel free to contact me through email.
 
