@@ -12,9 +12,9 @@ navbar:
     - text: "CV"
       icon: fa-file
       href: cv.html
-    - text: "Projects"
+    - text: "Portfolio/Projects"
       icon: fa-globe
-      href: projects.html
+      href: https://github.com/johnwoodill/Data-Science-Portfolio
     - text: "Research"
       icon: fa-globe
       href: research.html
