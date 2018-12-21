@@ -28,9 +28,7 @@ output:
 
 &emsp; Aside from climate change research I am also facinated with data science and using machine/deep learning methods to uncover insights into data. Through an economic lens, I am inspired by the many ways to model data that provide insight into decision making and to answer difficult questions. I am amazed at the new technologies in advanced analytics that now allow us to take advantage of big data and make more informed decisions.
 
-Check out my [Technical Resume](http://johnwoodill.github.io/images/AJohnWoodill_techresume.pdf), [CV](http://johnwoodill.github.io/images/AJohnWoodill_CV.pdf), and [Data Science Portfolio](https://github.com/johnwoodill/Data-Science-Portfolio). 
-
-Check out the links at the top of the page to learn more about my interests and experiences.
+Check out my [Technical Resume/CV](http://johnwoodill.github.io/images/AJohnWoodill_TR_CV.pdf), [Data Science Portfolio](https://github.com/johnwoodill/Data-Science-Portfolio), or explore the links at the top of the page to learn more about my interests and experiences.
 
 Feel free to contact me through email.
 
