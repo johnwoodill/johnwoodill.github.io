@@ -23,7 +23,7 @@ output:
 
 <br>
 
-&emsp; I recently graduated with a Ph.D. in Economics from the University of Hawaii. My primary research interest focuses on the economic impact of climate change on agriculture. I have extensive experience modeling and predicting crop yield, revenue, and acres using historical weather/climate data (degree days and time in each degree) and farm-level data, such as available water, soil permeability, and soil class. Two of my more recent projects include building a Neural Network to predict crop yield and a Recurrent Neural Networks to predict commodity prices.
+&emsp; I recently graduated with a Ph.D. in Economics from the University of Hawaii. My primary research interest focuses on the economic impact of climate change on agriculture. I have extensive experience modeling and predicting crop yield, revenue, and acres using historical weather/climate data (degree days and time in each degree) and farm-level data, such as available water, soil permeability, and soil class. Two of my more recent projects include building a Neural Network to predict crop yield and a Recurrent Neural Network to predict commodity prices.
 
 
 &emsp; Aside from climate change research I am also facinated with data science and using machine/deep learning methods to uncover insights into data. Through an economic lens, I am inspired by the many ways we are able to model data to provide insight into decision making and to answer difficult questions. I am amazed at the new technologies in advanced analytics that now allow us to take advantage of big data and make more informed decisions.
