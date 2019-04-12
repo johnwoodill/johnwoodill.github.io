@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>research.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,7 +22,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -91,8 +92,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -108,7 +115,6 @@ body {
   padding-top: 66px;
   margin-top: -66px;
 }
-
 .section h2 {
   padding-top: 66px;
   margin-top: -66px;
@@ -128,6 +134,43 @@ body {
 .section h6 {
   padding-top: 66px;
   margin-top: -66px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -149,18 +192,77 @@ $(document).ready(function () {
 });
 </script>
 
-
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -271,32 +373,25 @@ $(document).ready(function () {
 <div id="working-papers" class="section level2">
 <h2>Working Papers</h2>
 <hr />
-<div id="nonlinear-temperature-effects-and-short-run-adaptation-of-the-dust-bowl-region-during-the-1930s" class="section level4">
-<h4><strong>Nonlinear Temperature Effects and Short-Run Adaptation of the Dust Bowl Region during the 1930s</strong></h4>
+<p>####<strong>Nonlinear Temperature Effects and Short-Run Adaptation of the Dust Bowl Region during the 1930s</strong>####</p>
 <p>A. John Woodill</p>
 <p>The Dust Bowl of the 1930s was one of the most significant environmental events in American history. Understanding the short-run adjustments from major weather events on agricultural yield can shed light on the economic impacts of changing weather conditions. Nonlinear temperature effects are examined in the Great Plains region of the US from 1910 - 1960 to identify changes in corn yield and short-run adaptation. Results show the Dust Bowl region had more harmful temperatures than the Northern Great Plains, but the temperature effect on corn yields were similar in each region; however, total corn yields from 1910-1960 were less in the Dust Bowl region. Nonlinear estimation results show slight adaptation in the Dust Bowl region and no adaptation in the Northern region. Adaptation appears to be limited in the short-run even with the introduction of hybrid corn and changing farming practices. Precipitation also appears to play less of a role on crop yields. These results add a historical perspective to the issue of short-run adaptation due to extreme weather events.</p>
 <ul>
 <li><a href="https://github.com/johnwoodill/Non-Linear-Temperature-Effects-of-the-Dust-Bowl">Replication Content</a></li>
 </ul>
-</div>
-<div id="adaptation-and-the-envelope-theorem" class="section level4">
-<h4><strong>Adaptation and The Envelope Theorem</strong></h4>
+<p>####<strong>Adaptation and The Envelope Theorem</strong>####</p>
 <p>A. John Woodill and Michael J. Roberts</p>
 <p>Many suggest that adaptation will mitigate the harmful effects of climate change on agriculture, and offer this as a critique of studies that estimate climate-change impacts by extrapolating from short-run links between crop yield and weather. However, the Envelope Theorem suggests that adaptation through behavioral changes due to exogenous changes in the climate can be safely ignored because behavior is already optimized; therefore, adaptation is a second-order effect from extreme events and non-linearities. Further, weather responses should provide a first-order approximation to the climate response, a point we clarify more generally in this paper. In this paper, we outline a simple model to show the Envelope Theoreom holds across continuous and discrete crop-switching decisions. We then provide a numerical example to show that, to a first-order approximation, adaptation is unable to mitigate the effects of climate change.</p>
 <ul>
 <li><a href="https://github.com/johnwoodill/adaptation-numerical-example">Replication Content</a></li>
 </ul>
-</div>
-<div id="adaptation-to-climate-change-disentangling-revenue-and-crop-choice-responses" class="section level4">
-<h4><strong>Adaptation to Climate Change: Disentangling Revenue and Crop Choice Responses</strong></h4>
+<p>####<strong>Adaptation to Climate Change: Disentangling Revenue and Crop Choice Responses</strong>####</p>
 <p>A. John Woodill and Michael J. Roberts</p>
 <p>Adaptation by crop-switching has been suggested as a way to mitigate the harmfull effects of climate change on agriculture. Empirically, long run impact studies focus on cross-sectional associ- ations between agricultural outcomes and prevailing climate, implicitly accounting for adaptation; but the adaptive mechanism is not clear and the relationships may be confounded by unobserved factors. In this paper, we use a long history of crop choice and productivity outcomes to estimate effects of both weather and climate for major field crops in the United States. The approach lever- ages historical differences in climate trends across U.S. counties, differences that are large enough to span anticipated climate changes over the next 50 years, even after removing state-level trends. Climates are defined by backward-looking rolling means of the weather measures, with lag length selected via cross-validation. We then estimate the effect of climate change from a base level to uniform increases in temperature from 0-5°C. We find adaptation slightly reduces impacts relative to estimates that consider weather alone.</p>
 <ul>
 <li><a href="https://github.com/johnwoodill/crop-choice-and-adaptation">Replication Content</a></li>
 </ul>
-</div>
-<div id="optimal-spraying-and-harvesting-strategies-to-combat-cbb-in-hawaii-a-dynamic-approach" class="section level4">
-<h4><strong>Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach</strong></h4>
+<p>####<strong>Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach</strong></p>
 <p>A. John Woodill, Stuart T. Nakamoto, Andrea Kawabata, and PingSun Leung</p>
 <p>This paper considers optimal decisions coffee farmers make to combat damage from the coffee berry borer in Hawaii. We model the decision to spray or not spray a biological insecticide, Beauveria bassiana, based on the expected damage from not spraying versus the cost to spray. If damages are greater than the cost to spray, then it is beneficial to spray in order to mitigate damage to coffee. A time-inhomogenous Markov-chain is used to estimate economic damage in each month based on a spray decision. The Markov- chain is incorporated into a dynamic programming model to optimize the net-benefit during a coffee growing season. Results provide an optimal decision path for a coffee growing season and an optimal final net-benefit. Next, we compare our economic model against decisions from integrated pest management strategies, always spraying, or never spray. Results show our economic model performs best when optimizing net-benefit for a typical farm in Kona Hawaii.</p>
 <ul>
@@ -312,7 +407,6 @@ $(document).ready(function () {
   ga('send', 'pageview');
 
 </script>
-</div>
 </div>
 
 
