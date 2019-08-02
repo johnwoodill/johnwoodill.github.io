@@ -11,10 +11,14 @@ output:
 
 
 
-Selected Papers
+Peer-reviewed Papers
 ----------------------
 
 *********
+
+**Woodill, A. J.**, Nakamoto, S. T., Kawabata, A. M., & Arita, S., Leung, P. (2019). The Impact of CBB on the Economics of Coffee Production in Hawai‘i: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  2007–2012 USDA Census Analysis. (May), 1-12 Insect Pests. [[**link**]](https://www.ctahr.hawaii.edu/oc/freepubs/pdf/IP-46.pdf)
 
 **Woodill, A. J.**, Nakamoto, S. T., Kawabata, A. M., & Leung, P. (2017). To Spray or Not to Spray: A Decision Analysis of Coffee Berry Borer in Hawaii. 
 
@@ -35,7 +39,7 @@ Working Papers
 
 *********
 
-####**Nonlinear Temperature Effects and Short-Run Adaptation of the Dust Bowl Region during the 1930s**####
+#### **Nonlinear Temperature Effects and Short-Run Adaptation of the Dust Bowl Region during the 1930s**####
 
 A. John Woodill
 
@@ -48,15 +52,28 @@ the temperature effect on corn yields were similar in each region; however, tota
 
 * [Replication Content](https://github.com/johnwoodill/Non-Linear-Temperature-Effects-of-the-Dust-Bowl)
 
-####**Adaptation and The Envelope Theorem**####
+#### **Adaptation and The Envelope Theorem**####
 
 A. John Woodill and Michael J. Roberts
 
-Many suggest that adaptation will mitigate the harmful effects of climate change on agriculture, and offer this as a critique of studies that estimate climate-change impacts by extrapolating from short-run links between crop yield and weather. However, the Envelope Theorem suggests that adaptation through behavioral changes due to exogenous changes in the climate can be safely ignored because behavior is already optimized; therefore, adaptation is a second-order effect from extreme events and non-linearities. Further, weather responses should provide a first-order approximation to the climate response, a point we clarify more generally in this paper. In this paper, we outline a simple model to show the Envelope Theoreom holds across continuous and discrete crop-switching decisions. We then provide a numerical example to show that, to a first-order approximation, adaptation is unable to mitigate the effects of climate change.
+Many suggest that adaptation can mitigate the harmful effects of climate change on agriculture.
+Not accounting for adaptation is offered as a critique of studies that estimate climate change im-
+pacts by extrapolating from short-run links between crop yield and weather. However, the envelope
+theorem suggests that adaptation through behavioral changes from climate can be safely ignored
+because the behavior is already optimized. Therefore, adaptation is a second-order effect of extreme
+events and nonlinearities. Additionally, marginal effects of weather provide an approximation for
+climate responses. In this paper, we provide a simple model to show that the envelope theorem holds
+across continuous and discrete crop switching decisions, which is a common adaptation mechanism
+to climate change. We then carry out an empirical analysis to show that nonlinear effects without
+adaptation have a negative impact on revenue-per-acre as temperatures increase, but reduced nega-
+tive effects when accounting for adaptation. Additionally, we show marginal approximation without
+adaptation provides a reasonable estimate of nonlinear effects with adaptation. These results sug-
+gest that accounting for adaptation can be ignored in order to get useful estimates of the effects of
+climate change on agriculture.
 
 * [Replication Content](https://github.com/johnwoodill/adaptation-numerical-example)
 
-####**Adaptation to Climate Change: Disentangling Revenue and Crop Choice Responses**####
+#### **Adaptation to Climate Change: Disentangling Revenue and Crop Choice Responses**####
 
 A. John Woodill and Michael J. Roberts
 
@@ -64,11 +81,22 @@ Adaptation by crop-switching has been suggested as a way to mitigate the harmful
 
 * [Replication Content](https://github.com/johnwoodill/crop-choice-and-adaptation)
 
-####**Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach**
+#### **Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach**
 
 A. John Woodill, Stuart T. Nakamoto, Andrea Kawabata, and PingSun Leung
 
-This paper considers optimal decisions coffee farmers make to combat damage from the coffee berry borer in Hawaii. We model the decision to spray or not spray a biological insecticide, Beauveria bassiana, based on the expected damage from not spraying versus the cost to spray. If damages are greater than the cost to spray, then it is beneficial to spray in order to mitigate damage to coffee. A time-inhomogenous Markov-chain is used to estimate economic damage in each month based on a spray decision. The Markov- chain is incorporated into a dynamic programming model to optimize the net-benefit during a coffee growing season. Results provide an optimal decision path for a coffee growing season and an optimal final net-benefit. Next, we compare our economic model against decisions from integrated pest management strategies, always spraying, or never spray. Results show our economic model performs best when optimizing net-benefit for a typical farm in Kona Hawaii.
+This paper considers optimal decisions coffee farmers make to combat damage from the
+coffee berry borer in Hawaii. We model the decision to spray or not spray a biological
+insecticide, Beauveria bassiana, based on the expected damage from not spraying versus the
+cost to spray. If damages are greater than the cost to spray, then it is beneficial to spray in
+order to mitigate damage to coffee. To estimate economic damage, we use a Markov-chain
+to track changes in farm-level infestation level damages temporally. The Markov-chain is
+incorporated into a dynamic programming model to optimize the net-benefit during a coffee
+growing season. Results provide an optimal decision path for a coffee growing season and
+an optimal final net-benefit. Next, we compare our economic model against decisions from
+integrated pest management strategies and decisions to always spraying or to never spray.
+Results show our economic model performs best when optimizing net-benefit for a typical
+farm in Kona Hawaii.
 
 * [Replication Content](https://github.com/johnwoodill/cbb-dynamic-model)
 
