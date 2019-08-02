@@ -18,9 +18,6 @@ navbar:
     - text: "Research"
       icon: fa-globe
       href: research.html
-    - text: "Code"
-      icon: fa-code
-      href: code.html
     - text: "Blog"
       icon: fa-pencil
       href: http://johnwoodill.blogspot.com
