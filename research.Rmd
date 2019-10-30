@@ -39,6 +39,35 @@ Working Papers
 
 *********
 
+#### (Under Review) **Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach**
+
+A. John Woodill, Stuart T. Nakamoto, Andrea Kawabata, and PingSun Leung
+
+This paper considers optimal decisions coffee farmers make to combat damage from the
+coffee berry borer in Hawaii. We model the decision to spray or not spray a biological
+insecticide, Beauveria bassiana, based on the expected damage from not spraying versus the
+cost to spray. If damages are greater than the cost to spray, then it is beneficial to spray in
+order to mitigate damage to coffee. To estimate economic damage, we use a Markov-chain
+to track changes in farm-level infestation level damages temporally. The Markov-chain is
+incorporated into a dynamic programming model to optimize the net-benefit during a coffee
+growing season. Results provide an optimal decision path for a coffee growing season and
+an optimal final net-benefit. Next, we compare our economic model against decisions from
+integrated pest management strategies and decisions to always spraying or to never spray.
+Results show our economic model performs best when optimizing net-benefit for a typical
+farm in Kona Hawaii.
+
+* [Replication Content](https://github.com/johnwoodill/cbb-dynamic-model)
+
+
+#### (Under Review) **Anticipating Illegal Maritime Activities from Anomalous Multiscale Fleet Behaviors**
+
+James R. Watson and A. John Woodill
+
+Illegal fishing is prevalent throughout the world and heavily impacts the health of our oceans, the sustainability and profitability of fisheries, and even acts to destabilize geopolitical relations. To achieve the United Nations' Sustainable Development Goal of "Life Below Water", our ability to detect and predict illegal fishing must improve. Recent advances have been made through the use of vessel location data, however, most analyses to date focus on anomalous spatial behaviors of vessels one at a time. To improve predictions, we develop a method inspired by complex systems theory to monitor the anomalous multi-scale behavior of whole fleets as they respond to nearby illegal activities. Specifically, we analyze changes in the multiscale geospatial organization of fishing fleets operating on the Patagonia Shelf, an important fishing region with chronic exposure to illegal fishing. We show that legally operating (and visible) vessels respond anomalously to nearby illegal activities (by vessels that are difficult to detect). Indeed, precursor behaviors are identified, suggesting a path towards pre-empting illegal activities. This approach offers a promising step towards a global system for detecting, predicting and deterring illegal activities at sea in near real-time. Doing so will be a big step forward to achieving sustainable life underwater.
+
+* [arXiv:1910.05424 (PDF)](https://arxiv.org/abs/1910.05424)
+
+
 #### **Nonlinear Temperature Effects and Short-Run Adaptation of the Dust Bowl Region during the 1930s**####
 
 A. John Woodill
@@ -51,6 +80,8 @@ Results show the Dust Bowl region had more harmful temperatures than the Norther
 the temperature effect on corn yields were similar in each region; however, total corn yields from 1910-1960 were less in the Dust Bowl region. Nonlinear estimation results show slight adaptation in the Dust Bowl region and no adaptation in the Northern region. Adaptation appears to be limited in the short-run even with the introduction of hybrid corn and changing farming practices. Precipitation also appears to play less of a role on crop yields. These results add a historical perspective to the issue of short-run adaptation due to extreme weather events.
 
 * [Replication Content](https://github.com/johnwoodill/Non-Linear-Temperature-Effects-of-the-Dust-Bowl)
+
+
 
 #### **Adaptation and The Envelope Theorem**####
 
@@ -81,24 +112,6 @@ Adaptation by crop-switching has been suggested as a way to mitigate the harmful
 
 * [Replication Content](https://github.com/johnwoodill/crop-choice-and-adaptation)
 
-#### **Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach**
-
-A. John Woodill, Stuart T. Nakamoto, Andrea Kawabata, and PingSun Leung
-
-This paper considers optimal decisions coffee farmers make to combat damage from the
-coffee berry borer in Hawaii. We model the decision to spray or not spray a biological
-insecticide, Beauveria bassiana, based on the expected damage from not spraying versus the
-cost to spray. If damages are greater than the cost to spray, then it is beneficial to spray in
-order to mitigate damage to coffee. To estimate economic damage, we use a Markov-chain
-to track changes in farm-level infestation level damages temporally. The Markov-chain is
-incorporated into a dynamic programming model to optimize the net-benefit during a coffee
-growing season. Results provide an optimal decision path for a coffee growing season and
-an optimal final net-benefit. Next, we compare our economic model against decisions from
-integrated pest management strategies and decisions to always spraying or to never spray.
-Results show our economic model performs best when optimizing net-benefit for a typical
-farm in Kona Hawaii.
-
-* [Replication Content](https://github.com/johnwoodill/cbb-dynamic-model)
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
