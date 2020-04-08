@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -44,7 +43,7 @@ a.sourceLine { text-indent: -1em; padding-left: 1em; }
 pre.numberSource a.sourceLine
   { position: relative; left: -4em; }
 pre.numberSource a.sourceLine::before
-  { content: attr(title);
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
     border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
@@ -102,7 +101,7 @@ code span.wa { color: #7f9f7f; font-weight: bold; } /* Warning */
       if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -159,6 +158,7 @@ code {
 }
 img {
   max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -319,6 +319,18 @@ $(document).ready(function () {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 
 
@@ -443,62 +455,62 @@ $(document).ready(function () {
 </ul>
 <p><code>Stata</code> makes this very easy by just attaching <code>aweight</code> or <code>pweight</code> to the end of the regression line. However, in <code>R</code>, it requires a bit of understanding for each packages. The <code>lm()</code> function only does analytic weighting, but for sampling weights, the <code>survey</code> package is used to to build a survey design object and run <code>glm()</code>. By default, the <code>survey</code> package uses sampling weights.</p>
 <p><strong>Sample data.frame (from <code>dput</code>)</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">  data &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>(<span class="dt">lexptot =</span> <span class="kw">c</span>(<span class="fl">9.1595012302023</span>, <span class="fl">9.86330744180814</span>, </a>
-<a class="sourceLine" id="cb1-2" title="2">  <span class="fl">8.92372556833205</span>, <span class="fl">8.58202430280175</span>, <span class="fl">10.1133857229336</span>), <span class="dt">progvillm =</span> <span class="kw">c</span>(1L, </a>
-<a class="sourceLine" id="cb1-3" title="3">  1L, 1L, 1L, 0L), <span class="dt">sexhead =</span> <span class="kw">c</span>(1L, 1L, 0L, 1L, 1L), <span class="dt">agehead =</span> <span class="kw">c</span>(79L, </a>
-<a class="sourceLine" id="cb1-4" title="4">  43L, 52L, 48L, 35L), <span class="dt">weight =</span> <span class="kw">c</span>(<span class="fl">1.04273509979248</span>, <span class="fl">1.01139605045319</span>, </a>
-<a class="sourceLine" id="cb1-5" title="5">  <span class="fl">1.01139605045319</span>, <span class="fl">1.01139605045319</span>, <span class="fl">0.76305216550827</span>)), <span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;lexptot&quot;</span>, </a>
-<a class="sourceLine" id="cb1-6" title="6">  <span class="st">&quot;progvillm&quot;</span>, <span class="st">&quot;sexhead&quot;</span>, <span class="st">&quot;agehead&quot;</span>, <span class="st">&quot;weight&quot;</span>), <span class="dt">class =</span> <span class="kw">c</span>(<span class="st">&quot;tbl_df&quot;</span>, </a>
-<a class="sourceLine" id="cb1-7" title="7">  <span class="st">&quot;tbl&quot;</span>, <span class="st">&quot;data.frame&quot;</span>), <span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>5L))</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">  data &lt;-<span class="st"> </span><span class="kw">structure</span>(<span class="kw">list</span>(<span class="dt">lexptot =</span> <span class="kw">c</span>(<span class="fl">9.1595012302023</span>, <span class="fl">9.86330744180814</span>, </a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">  <span class="fl">8.92372556833205</span>, <span class="fl">8.58202430280175</span>, <span class="fl">10.1133857229336</span>), <span class="dt">progvillm =</span> <span class="kw">c</span>(1L, </a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  1L, 1L, 1L, 0L), <span class="dt">sexhead =</span> <span class="kw">c</span>(1L, 1L, 0L, 1L, 1L), <span class="dt">agehead =</span> <span class="kw">c</span>(79L, </a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">  43L, 52L, 48L, 35L), <span class="dt">weight =</span> <span class="kw">c</span>(<span class="fl">1.04273509979248</span>, <span class="fl">1.01139605045319</span>, </a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">  <span class="fl">1.01139605045319</span>, <span class="fl">1.01139605045319</span>, <span class="fl">0.76305216550827</span>)), <span class="dt">.Names =</span> <span class="kw">c</span>(<span class="st">&quot;lexptot&quot;</span>, </a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">  <span class="st">&quot;progvillm&quot;</span>, <span class="st">&quot;sexhead&quot;</span>, <span class="st">&quot;agehead&quot;</span>, <span class="st">&quot;weight&quot;</span>), <span class="dt">class =</span> <span class="kw">c</span>(<span class="st">&quot;tbl_df&quot;</span>, </a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">  <span class="st">&quot;tbl&quot;</span>, <span class="st">&quot;data.frame&quot;</span>), <span class="dt">row.names =</span> <span class="kw">c</span>(<span class="ot">NA</span>, <span class="op">-</span>5L))</a></code></pre></div>
 <p><strong>Analytic Weights</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">lm.analytic &lt;-<span class="st"> </span><span class="kw">lm</span>(lexptot <span class="op">~</span><span class="st"> </span>progvillm <span class="op">+</span><span class="st"> </span>sexhead <span class="op">+</span><span class="st"> </span>agehead, <span class="dt">data =</span> data, <span class="dt">weight =</span> weight)</a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="kw">summary</span>(lm.analytic)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">lm.analytic &lt;-<span class="st"> </span><span class="kw">lm</span>(lexptot <span class="op">~</span><span class="st"> </span>progvillm <span class="op">+</span><span class="st"> </span>sexhead <span class="op">+</span><span class="st"> </span>agehead, <span class="dt">data =</span> data, <span class="dt">weight =</span> weight)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw">summary</span>(lm.analytic)</a></code></pre></div>
 <p><strong>Output</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">Call<span class="op">:</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="kw">lm</span>(<span class="dt">formula =</span> lexptot <span class="op">~</span><span class="st"> </span>progvillm <span class="op">+</span><span class="st"> </span>sexhead <span class="op">+</span><span class="st"> </span>agehead, <span class="dt">data =</span> data, </a>
-<a class="sourceLine" id="cb3-3" title="3">    <span class="dt">weights =</span> weight)</a>
-<a class="sourceLine" id="cb3-4" title="4"></a>
-<a class="sourceLine" id="cb3-5" title="5">Weighted Residuals<span class="op">:</span></a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="st">         </span><span class="dv">1</span>          <span class="dv">2</span>          <span class="dv">3</span>          <span class="dv">4</span>          <span class="dv">5</span> </a>
-<a class="sourceLine" id="cb3-7" title="7"> <span class="fl">9.249e-02</span>  <span class="fl">5.823e-01</span>  <span class="fl">0.000e+00</span> <span class="fl">-6.762e-01</span> <span class="fl">-1.527e-16</span></a>
-<a class="sourceLine" id="cb3-8" title="8"></a>
-<a class="sourceLine" id="cb3-9" title="9">Coefficients<span class="op">:</span></a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="st">             </span>Estimate Std. Error t value <span class="kw">Pr</span>(<span class="op">&gt;</span><span class="er">|</span>t<span class="op">|</span>)</a>
-<a class="sourceLine" id="cb3-11" title="11">(Intercept) <span class="fl">10.016054</span>   <span class="fl">1.744293</span>   <span class="fl">5.742</span>    <span class="fl">0.110</span></a>
-<a class="sourceLine" id="cb3-12" title="12">progvillm   <span class="fl">-0.781204</span>   <span class="fl">1.344974</span>  <span class="fl">-0.581</span>    <span class="fl">0.665</span></a>
-<a class="sourceLine" id="cb3-13" title="13">sexhead      <span class="fl">0.306742</span>   <span class="fl">1.040625</span>   <span class="fl">0.295</span>    <span class="fl">0.818</span></a>
-<a class="sourceLine" id="cb3-14" title="14">agehead     <span class="fl">-0.005983</span>   <span class="fl">0.032024</span>  <span class="fl">-0.187</span>    <span class="fl">0.882</span></a>
-<a class="sourceLine" id="cb3-15" title="15"></a>
-<a class="sourceLine" id="cb3-16" title="16">Residual standard error<span class="op">:</span><span class="st"> </span><span class="fl">0.8971</span> on <span class="dv">1</span> degrees of freedom</a>
-<a class="sourceLine" id="cb3-17" title="17">Multiple R<span class="op">-</span>squared<span class="op">:</span><span class="st">  </span><span class="fl">0.467</span>, Adjusted R<span class="op">-</span>squared<span class="op">:</span><span class="st">  </span><span class="fl">-1.132</span> </a>
-<a class="sourceLine" id="cb3-18" title="18">F<span class="op">-</span>statistic<span class="op">:</span><span class="st"> </span><span class="fl">0.2921</span> on <span class="dv">3</span> and <span class="dv">1</span> DF,  p<span class="op">-</span>value<span class="op">:</span><span class="st"> </span><span class="fl">0.8386</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">Call<span class="op">:</span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw">lm</span>(<span class="dt">formula =</span> lexptot <span class="op">~</span><span class="st"> </span>progvillm <span class="op">+</span><span class="st"> </span>sexhead <span class="op">+</span><span class="st"> </span>agehead, <span class="dt">data =</span> data, </a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">    <span class="dt">weights =</span> weight)</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">Weighted Residuals<span class="op">:</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="st">         </span><span class="dv">1</span>          <span class="dv">2</span>          <span class="dv">3</span>          <span class="dv">4</span>          <span class="dv">5</span> </a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"> <span class="fl">9.249e-02</span>  <span class="fl">5.823e-01</span>  <span class="fl">0.000e+00</span> <span class="fl">-6.762e-01</span> <span class="fl">-1.527e-16</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">Coefficients<span class="op">:</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="st">             </span>Estimate Std. Error t value <span class="kw">Pr</span>(<span class="op">&gt;</span><span class="er">|</span>t<span class="op">|</span>)</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">(Intercept) <span class="fl">10.016054</span>   <span class="fl">1.744293</span>   <span class="fl">5.742</span>    <span class="fl">0.110</span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12">progvillm   <span class="fl">-0.781204</span>   <span class="fl">1.344974</span>  <span class="fl">-0.581</span>    <span class="fl">0.665</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13">sexhead      <span class="fl">0.306742</span>   <span class="fl">1.040625</span>   <span class="fl">0.295</span>    <span class="fl">0.818</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14">agehead     <span class="fl">-0.005983</span>   <span class="fl">0.032024</span>  <span class="fl">-0.187</span>    <span class="fl">0.882</span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16">Residual standard error<span class="op">:</span><span class="st"> </span><span class="fl">0.8971</span> on <span class="dv">1</span> degrees of freedom</a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">Multiple R<span class="op">-</span>squared<span class="op">:</span><span class="st">  </span><span class="fl">0.467</span>, Adjusted R<span class="op">-</span>squared<span class="op">:</span><span class="st">  </span><span class="fl">-1.132</span> </a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">F<span class="op">-</span>statistic<span class="op">:</span><span class="st"> </span><span class="fl">0.2921</span> on <span class="dv">3</span> and <span class="dv">1</span> DF,  p<span class="op">-</span>value<span class="op">:</span><span class="st"> </span><span class="fl">0.8386</span></a></code></pre></div>
 <p><strong>Sampling Weights (IPW)</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">data<span class="op">$</span>X &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(data)             <span class="co"># Create unique id</span></a>
-<a class="sourceLine" id="cb4-2" title="2"></a>
-<a class="sourceLine" id="cb4-3" title="3"><span class="co"># Build survey design object with unique id, ipw, and data.frame</span></a>
-<a class="sourceLine" id="cb4-4" title="4">des1 &lt;-<span class="st"> </span><span class="kw">svydesign</span>(<span class="dt">id =</span> <span class="op">~</span>X,  <span class="dt">weights =</span> <span class="op">~</span>weight, <span class="dt">data =</span> data)</a>
-<a class="sourceLine" id="cb4-5" title="5"></a>
-<a class="sourceLine" id="cb4-6" title="6"><span class="co"># Run glm with survey design object</span></a>
-<a class="sourceLine" id="cb4-7" title="7">prog.lm &lt;-<span class="st"> </span><span class="kw">svyglm</span>(lexptot <span class="op">~</span><span class="st"> </span>progvillm <span class="op">+</span><span class="st"> </span>sexhead <span class="op">+</span><span class="st"> </span>agehead, <span class="dt">design=</span>des1)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">data<span class="op">$</span>X &lt;-<span class="st"> </span><span class="dv">1</span><span class="op">:</span><span class="kw">nrow</span>(data)             <span class="co"># Create unique id</span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># Build survey design object with unique id, ipw, and data.frame</span></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">des1 &lt;-<span class="st"> </span><span class="kw">svydesign</span>(<span class="dt">id =</span> <span class="op">~</span>X,  <span class="dt">weights =</span> <span class="op">~</span>weight, <span class="dt">data =</span> data)</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co"># Run glm with survey design object</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">prog.lm &lt;-<span class="st"> </span><span class="kw">svyglm</span>(lexptot <span class="op">~</span><span class="st"> </span>progvillm <span class="op">+</span><span class="st"> </span>sexhead <span class="op">+</span><span class="st"> </span>agehead, <span class="dt">design=</span>des1)</a></code></pre></div>
 <p><strong>Output :</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">Call<span class="op">:</span></a>
-<a class="sourceLine" id="cb5-2" title="2"><span class="kw">svyglm</span>(<span class="dt">formula =</span> lexptot <span class="op">~</span><span class="st"> </span>progvillm <span class="op">+</span><span class="st"> </span>sexhead <span class="op">+</span><span class="st"> </span>agehead, <span class="dt">design =</span> des1)</a>
-<a class="sourceLine" id="cb5-3" title="3"></a>
-<a class="sourceLine" id="cb5-4" title="4">Survey design<span class="op">:</span></a>
-<a class="sourceLine" id="cb5-5" title="5"><span class="kw">svydesign</span>(<span class="dt">id =</span> <span class="op">~</span>X, <span class="dt">weights =</span> <span class="op">~</span>weight, <span class="dt">data =</span> data)</a>
-<a class="sourceLine" id="cb5-6" title="6"></a>
-<a class="sourceLine" id="cb5-7" title="7">Coefficients<span class="op">:</span></a>
-<a class="sourceLine" id="cb5-8" title="8"><span class="st">             </span>Estimate Std. Error t value <span class="kw">Pr</span>(<span class="op">&gt;</span><span class="er">|</span>t<span class="op">|</span>)  </a>
-<a class="sourceLine" id="cb5-9" title="9">(Intercept) <span class="fl">10.016054</span>   <span class="fl">0.183942</span>  <span class="fl">54.452</span>   <span class="fl">0.0117</span> <span class="op">*</span></a>
-<a class="sourceLine" id="cb5-10" title="10">progvillm   <span class="fl">-0.781204</span>   <span class="fl">0.640372</span>  <span class="fl">-1.220</span>   <span class="fl">0.4371</span>  </a>
-<a class="sourceLine" id="cb5-11" title="11">sexhead      <span class="fl">0.306742</span>   <span class="fl">0.397089</span>   <span class="fl">0.772</span>   <span class="fl">0.5813</span>  </a>
-<a class="sourceLine" id="cb5-12" title="12">agehead     <span class="fl">-0.005983</span>   <span class="fl">0.014747</span>  <span class="fl">-0.406</span>   <span class="fl">0.7546</span>  </a>
-<a class="sourceLine" id="cb5-13" title="13"><span class="op">---</span></a>
-<a class="sourceLine" id="cb5-14" title="14">Signif. codes<span class="op">:</span><span class="st">  </span><span class="dv">0</span> ‘<span class="op">**</span><span class="er">*</span>’ <span class="fl">0.001</span> ‘<span class="op">**</span>’ <span class="fl">0.01</span> ‘<span class="op">*</span>’ <span class="fl">0.05</span> ‘.’ <span class="fl">0.1</span> ‘ ’ <span class="dv">1</span></a>
-<a class="sourceLine" id="cb5-15" title="15"></a>
-<a class="sourceLine" id="cb5-16" title="16">(Dispersion parameter <span class="cf">for</span> gaussian family taken to be <span class="fl">0.2078647</span>)</a>
-<a class="sourceLine" id="cb5-17" title="17"></a>
-<a class="sourceLine" id="cb5-18" title="18">Number of Fisher Scoring iterations<span class="op">:</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">Call<span class="op">:</span></a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw">svyglm</span>(<span class="dt">formula =</span> lexptot <span class="op">~</span><span class="st"> </span>progvillm <span class="op">+</span><span class="st"> </span>sexhead <span class="op">+</span><span class="st"> </span>agehead, <span class="dt">design =</span> des1)</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">Survey design<span class="op">:</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="kw">svydesign</span>(<span class="dt">id =</span> <span class="op">~</span>X, <span class="dt">weights =</span> <span class="op">~</span>weight, <span class="dt">data =</span> data)</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">Coefficients<span class="op">:</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="st">             </span>Estimate Std. Error t value <span class="kw">Pr</span>(<span class="op">&gt;</span><span class="er">|</span>t<span class="op">|</span>)  </a>
+<a class="sourceLine" id="cb5-9" data-line-number="9">(Intercept) <span class="fl">10.016054</span>   <span class="fl">0.183942</span>  <span class="fl">54.452</span>   <span class="fl">0.0117</span> <span class="op">*</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10">progvillm   <span class="fl">-0.781204</span>   <span class="fl">0.640372</span>  <span class="fl">-1.220</span>   <span class="fl">0.4371</span>  </a>
+<a class="sourceLine" id="cb5-11" data-line-number="11">sexhead      <span class="fl">0.306742</span>   <span class="fl">0.397089</span>   <span class="fl">0.772</span>   <span class="fl">0.5813</span>  </a>
+<a class="sourceLine" id="cb5-12" data-line-number="12">agehead     <span class="fl">-0.005983</span>   <span class="fl">0.014747</span>  <span class="fl">-0.406</span>   <span class="fl">0.7546</span>  </a>
+<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="op">---</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14">Signif. codes<span class="op">:</span><span class="st">  </span><span class="dv">0</span> ‘<span class="op">**</span><span class="er">*</span>’ <span class="fl">0.001</span> ‘<span class="op">**</span>’ <span class="fl">0.01</span> ‘<span class="op">*</span>’ <span class="fl">0.05</span> ‘.’ <span class="fl">0.1</span> ‘ ’ <span class="dv">1</span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16">(Dispersion parameter <span class="cf">for</span> gaussian family taken to be <span class="fl">0.2078647</span>)</a>
+<a class="sourceLine" id="cb5-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb5-18" data-line-number="18">Number of Fisher Scoring iterations<span class="op">:</span><span class="st"> </span><span class="dv">2</span></a></code></pre></div>
 <p>Note that the coefficients are the same, but the standard errors have been reduced from the analytic weighting.</p>
 <hr />
 </div>
@@ -511,71 +523,71 @@ $(document).ready(function () {
 <p><strong>Data set (164 mb)</strong> : <a href="https://www.dropbox.com/s/zwoq0ekpnh6be4a/CA_2000_appt.csv?dl=0">CA_2000_appt.csv</a></p>
 <p><strong>R Code</strong> : <a href="code/California.R">California.R</a></p>
 <p><strong><em>Libraries</em></strong></p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" title="1">    <span class="kw">library</span>(plyr)      <span class="co"># Data manipulation </span></a>
-<a class="sourceLine" id="cb6-2" title="2">    <span class="kw">library</span>(dplyr)     <span class="co"># Data manipulation </span></a>
-<a class="sourceLine" id="cb6-3" title="3">    <span class="kw">library</span>(ggplot2)   <span class="co"># Final Plot  </span></a>
-<a class="sourceLine" id="cb6-4" title="4">    <span class="kw">library</span>(automap)   <span class="co"># For Spacial Data</span></a>
-<a class="sourceLine" id="cb6-5" title="5">    <span class="kw">library</span>(akima)     <span class="co"># For interpolation</span></a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">    <span class="kw">library</span>(plyr)      <span class="co"># Data manipulation </span></a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">    <span class="kw">library</span>(dplyr)     <span class="co"># Data manipulation </span></a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">    <span class="kw">library</span>(ggplot2)   <span class="co"># Final Plot  </span></a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">    <span class="kw">library</span>(automap)   <span class="co"># For Spacial Data</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">    <span class="kw">library</span>(akima)     <span class="co"># For interpolation</span></a></code></pre></div>
 <p><strong>Creating Spatial Object</strong></p>
 <p>The first step is to build a spatial object consisting of California latitude and longitude coordinates for the entire state. This will allow the object to be plotted correctly with the precipitation spatial points built below.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">    CA_<span class="dv">2000</span>_appt &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;CA_2000_appt.csv&quot;</span>)</a>
-<a class="sourceLine" id="cb7-2" title="2">    sub_data =<span class="st"> </span><span class="kw">as.data.frame</span>(CA_<span class="dv">2000</span>_appt)</a>
-<a class="sourceLine" id="cb7-3" title="3">    coord_vars =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;latitude&quot;</span>,<span class="st">&quot;longitude&quot;</span>)</a>
-<a class="sourceLine" id="cb7-4" title="4">    data_vars =<span class="st"> </span><span class="kw">setdiff</span>(<span class="kw">colnames</span>(sub_data), coord_vars)         <span class="co"># All colnames except for Lat/Long</span></a>
-<a class="sourceLine" id="cb7-5" title="5">    sp_points =<span class="st"> </span><span class="kw">SpatialPoints</span>(sub_data[,coord_vars])            <span class="co"># All lat/long in Spatial Point format</span></a>
-<a class="sourceLine" id="cb7-6" title="6">    sp_df =<span class="st"> </span><span class="kw">SpatialPointsDataFrame</span>(sp_points,           <span class="co"># Spatial Data Frame of lat/long and remaining cols</span></a>
-<a class="sourceLine" id="cb7-7" title="7">                                     sub_data[,data_vars,<span class="dt">drop=</span><span class="ot">FALSE</span>])    </a>
-<a class="sourceLine" id="cb7-8" title="8">    regions &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;california&quot;</span>)</a>
-<a class="sourceLine" id="cb7-9" title="9">    map_base_data &lt;-<span class="st"> </span><span class="kw">filter</span>(<span class="kw">map_data</span>(<span class="st">&quot;state&quot;</span>), region <span class="op">==</span><span class="st"> &quot;california&quot;</span>)   <span class="co"># Get California lat/long coord.</span></a>
-<a class="sourceLine" id="cb7-10" title="10">    map_base_data &lt;-<span class="st"> </span><span class="kw">rename</span>(map_base_data, <span class="dt">longitude =</span> long)             <span class="co"># Rename columns</span></a>
-<a class="sourceLine" id="cb7-11" title="11">    map_base_data &lt;-<span class="st"> </span><span class="kw">rename</span>(map_base_data, <span class="dt">latitude =</span> lat)</a>
-<a class="sourceLine" id="cb7-12" title="12">  </a>
-<a class="sourceLine" id="cb7-13" title="13">    <span class="co"># Creates a Spatial Polygon for each state with lat/long</span></a>
-<a class="sourceLine" id="cb7-14" title="14">    <span class="co"># ---&gt; Used for plotting the map</span></a>
-<a class="sourceLine" id="cb7-15" title="15">  </a>
-<a class="sourceLine" id="cb7-16" title="16">    state_regions =<span class="st"> </span><span class="cf">function</span>(x) {        <span class="co"># Gets lat/long for each state to build Spatial Polygon</span></a>
-<a class="sourceLine" id="cb7-17" title="17">      state =<span class="st"> </span><span class="kw">unique</span>(x<span class="op">$</span>region)</a>
-<a class="sourceLine" id="cb7-18" title="18">      <span class="kw">print</span>(state)</a>
-<a class="sourceLine" id="cb7-19" title="19">      <span class="kw">Polygons</span>(<span class="kw">list</span>(<span class="kw">Polygon</span>(x[,<span class="kw">c</span>(<span class="st">&quot;latitude&quot;</span>,<span class="st">&quot;longitude&quot;</span>)])),<span class="dt">ID=</span>state)</a>
-<a class="sourceLine" id="cb7-20" title="20">    }   </a>
-<a class="sourceLine" id="cb7-21" title="21">  </a>
-<a class="sourceLine" id="cb7-22" title="22">    state_pg =<span class="st"> </span><span class="kw">SpatialPolygons</span>(<span class="kw">dlply</span>(map_base_data,     <span class="co"># Builds a Spatial Polygon of all state/regions</span></a>
-<a class="sourceLine" id="cb7-23" title="23">                                     .(region), </a>
-<a class="sourceLine" id="cb7-24" title="24">                                     state_regions))  </a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">    CA_<span class="dv">2000</span>_appt &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;CA_2000_appt.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2">    sub_data =<span class="st"> </span><span class="kw">as.data.frame</span>(CA_<span class="dv">2000</span>_appt)</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">    coord_vars =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;latitude&quot;</span>,<span class="st">&quot;longitude&quot;</span>)</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">    data_vars =<span class="st"> </span><span class="kw">setdiff</span>(<span class="kw">colnames</span>(sub_data), coord_vars)         <span class="co"># All colnames except for Lat/Long</span></a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">    sp_points =<span class="st"> </span><span class="kw">SpatialPoints</span>(sub_data[,coord_vars])            <span class="co"># All lat/long in Spatial Point format</span></a>
+<a class="sourceLine" id="cb7-6" data-line-number="6">    sp_df =<span class="st"> </span><span class="kw">SpatialPointsDataFrame</span>(sp_points,           <span class="co"># Spatial Data Frame of lat/long and remaining cols</span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">                                     sub_data[,data_vars,<span class="dt">drop=</span><span class="ot">FALSE</span>])    </a>
+<a class="sourceLine" id="cb7-8" data-line-number="8">    regions &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;california&quot;</span>)</a>
+<a class="sourceLine" id="cb7-9" data-line-number="9">    map_base_data &lt;-<span class="st"> </span><span class="kw">filter</span>(<span class="kw">map_data</span>(<span class="st">&quot;state&quot;</span>), region <span class="op">==</span><span class="st"> &quot;california&quot;</span>)   <span class="co"># Get California lat/long coord.</span></a>
+<a class="sourceLine" id="cb7-10" data-line-number="10">    map_base_data &lt;-<span class="st"> </span><span class="kw">rename</span>(map_base_data, <span class="dt">longitude =</span> long)             <span class="co"># Rename columns</span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11">    map_base_data &lt;-<span class="st"> </span><span class="kw">rename</span>(map_base_data, <span class="dt">latitude =</span> lat)</a>
+<a class="sourceLine" id="cb7-12" data-line-number="12">  </a>
+<a class="sourceLine" id="cb7-13" data-line-number="13">    <span class="co"># Creates a Spatial Polygon for each state with lat/long</span></a>
+<a class="sourceLine" id="cb7-14" data-line-number="14">    <span class="co"># ---&gt; Used for plotting the map</span></a>
+<a class="sourceLine" id="cb7-15" data-line-number="15">  </a>
+<a class="sourceLine" id="cb7-16" data-line-number="16">    state_regions =<span class="st"> </span><span class="cf">function</span>(x) {        <span class="co"># Gets lat/long for each state to build Spatial Polygon</span></a>
+<a class="sourceLine" id="cb7-17" data-line-number="17">      state =<span class="st"> </span><span class="kw">unique</span>(x<span class="op">$</span>region)</a>
+<a class="sourceLine" id="cb7-18" data-line-number="18">      <span class="kw">print</span>(state)</a>
+<a class="sourceLine" id="cb7-19" data-line-number="19">      <span class="kw">Polygons</span>(<span class="kw">list</span>(<span class="kw">Polygon</span>(x[,<span class="kw">c</span>(<span class="st">&quot;latitude&quot;</span>,<span class="st">&quot;longitude&quot;</span>)])),<span class="dt">ID=</span>state)</a>
+<a class="sourceLine" id="cb7-20" data-line-number="20">    }   </a>
+<a class="sourceLine" id="cb7-21" data-line-number="21">  </a>
+<a class="sourceLine" id="cb7-22" data-line-number="22">    state_pg =<span class="st"> </span><span class="kw">SpatialPolygons</span>(<span class="kw">dlply</span>(map_base_data,     <span class="co"># Builds a Spatial Polygon of all state/regions</span></a>
+<a class="sourceLine" id="cb7-23" data-line-number="23">                                     .(region), </a>
+<a class="sourceLine" id="cb7-24" data-line-number="24">                                     state_regions))  </a></code></pre></div>
 <p><strong>Spline Interpolation with akima package</strong></p>
 <p>Next, additional data points need to be interpolated from the given values in the data.frame in order to increase the clarity on the map. The steps for this section of code include interpolating the data, melting each lat/long for each interpolated appt, building the data.frame, and merging the California Spatial data.frame from above, with the original appt and interpolated points.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">    fld =<span class="st"> </span><span class="kw">with</span>(sub_data, <span class="kw">interp</span>(<span class="dt">x =</span> longitude, <span class="dt">y =</span> latitude, <span class="dt">z =</span> APPT, <span class="dt">duplicate=</span><span class="st">&quot;median&quot;</span>,</a>
-<a class="sourceLine" id="cb8-2" title="2">                                <span class="dt">xo=</span><span class="kw">seq</span>(<span class="kw">min</span>(map_base_data<span class="op">$</span>longitude), </a>
-<a class="sourceLine" id="cb8-3" title="3">                                       <span class="kw">max</span>(map_base_data<span class="op">$</span>longitude), <span class="dt">length =</span> <span class="dv">100</span>),</a>
-<a class="sourceLine" id="cb8-4" title="4">                                <span class="dt">yo=</span><span class="kw">seq</span>(<span class="kw">min</span>(map_base_data<span class="op">$</span>latitude), </a>
-<a class="sourceLine" id="cb8-5" title="5">                                       <span class="kw">max</span>(map_base_data<span class="op">$</span>latitude), <span class="dt">length =</span> <span class="dv">100</span>),</a>
-<a class="sourceLine" id="cb8-6" title="6">                                <span class="dt">extrap=</span><span class="ot">TRUE</span>, <span class="dt">linear=</span><span class="ot">FALSE</span>))</a>
-<a class="sourceLine" id="cb8-7" title="7">    melt_x =<span class="st"> </span><span class="kw">rep</span>(fld<span class="op">$</span>x, <span class="dt">times=</span><span class="kw">length</span>(fld<span class="op">$</span>y))                        <span class="co"># Pull out longitude values from list</span></a>
-<a class="sourceLine" id="cb8-8" title="8">    melt_y =<span class="st"> </span><span class="kw">rep</span>(fld<span class="op">$</span>y, <span class="dt">each=</span><span class="kw">length</span>(fld<span class="op">$</span>x))                         <span class="co"># Pull out latitude values from list</span></a>
-<a class="sourceLine" id="cb8-9" title="9">    melt_z =<span class="st"> </span><span class="kw">as.vector</span>(fld<span class="op">$</span>z)                                       <span class="co"># Pull out appt values from list</span></a>
-<a class="sourceLine" id="cb8-10" title="10">    level_data =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">longitude=</span>melt_x,                       <span class="co"># Build data.frame</span></a>
-<a class="sourceLine" id="cb8-11" title="11">                            <span class="dt">latitude=</span>melt_y, </a>
-<a class="sourceLine" id="cb8-12" title="12">                            <span class="dt">APPT=</span>melt_z)                                        </a>
-<a class="sourceLine" id="cb8-13" title="13">    interp_data =<span class="st"> </span><span class="kw">na.omit</span>(level_data)                               <span class="co"># Remove all NA values</span></a>
-<a class="sourceLine" id="cb8-14" title="14">    grid_points =<span class="st"> </span><span class="kw">SpatialPoints</span>(interp_data[,<span class="dv">2</span><span class="op">:</span><span class="dv">1</span>])                  <span class="co"># Build Spatial Points into object</span></a>
-<a class="sourceLine" id="cb8-15" title="15">    in_points =<span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(<span class="kw">over</span>(grid_points,state_pg))  <span class="co"># Logical determining points inside all regions </span></a>
-<a class="sourceLine" id="cb8-16" title="16">    inside_points =<span class="st"> </span>interp_data[in_points, ]        <span class="co"># Removes all points outside of Spatial Polygons</span></a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1">    fld =<span class="st"> </span><span class="kw">with</span>(sub_data, <span class="kw">interp</span>(<span class="dt">x =</span> longitude, <span class="dt">y =</span> latitude, <span class="dt">z =</span> APPT, <span class="dt">duplicate=</span><span class="st">&quot;median&quot;</span>,</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">                                <span class="dt">xo=</span><span class="kw">seq</span>(<span class="kw">min</span>(map_base_data<span class="op">$</span>longitude), </a>
+<a class="sourceLine" id="cb8-3" data-line-number="3">                                       <span class="kw">max</span>(map_base_data<span class="op">$</span>longitude), <span class="dt">length =</span> <span class="dv">100</span>),</a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">                                <span class="dt">yo=</span><span class="kw">seq</span>(<span class="kw">min</span>(map_base_data<span class="op">$</span>latitude), </a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">                                       <span class="kw">max</span>(map_base_data<span class="op">$</span>latitude), <span class="dt">length =</span> <span class="dv">100</span>),</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6">                                <span class="dt">extrap=</span><span class="ot">TRUE</span>, <span class="dt">linear=</span><span class="ot">FALSE</span>))</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">    melt_x =<span class="st"> </span><span class="kw">rep</span>(fld<span class="op">$</span>x, <span class="dt">times=</span><span class="kw">length</span>(fld<span class="op">$</span>y))                        <span class="co"># Pull out longitude values from list</span></a>
+<a class="sourceLine" id="cb8-8" data-line-number="8">    melt_y =<span class="st"> </span><span class="kw">rep</span>(fld<span class="op">$</span>y, <span class="dt">each=</span><span class="kw">length</span>(fld<span class="op">$</span>x))                         <span class="co"># Pull out latitude values from list</span></a>
+<a class="sourceLine" id="cb8-9" data-line-number="9">    melt_z =<span class="st"> </span><span class="kw">as.vector</span>(fld<span class="op">$</span>z)                                       <span class="co"># Pull out appt values from list</span></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10">    level_data =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">longitude=</span>melt_x,                       <span class="co"># Build data.frame</span></a>
+<a class="sourceLine" id="cb8-11" data-line-number="11">                            <span class="dt">latitude=</span>melt_y, </a>
+<a class="sourceLine" id="cb8-12" data-line-number="12">                            <span class="dt">APPT=</span>melt_z)                                        </a>
+<a class="sourceLine" id="cb8-13" data-line-number="13">    interp_data =<span class="st"> </span><span class="kw">na.omit</span>(level_data)                               <span class="co"># Remove all NA values</span></a>
+<a class="sourceLine" id="cb8-14" data-line-number="14">    grid_points =<span class="st"> </span><span class="kw">SpatialPoints</span>(interp_data[,<span class="dv">2</span><span class="op">:</span><span class="dv">1</span>])                  <span class="co"># Build Spatial Points into object</span></a>
+<a class="sourceLine" id="cb8-15" data-line-number="15">    in_points =<span class="st"> </span><span class="op">!</span><span class="kw">is.na</span>(<span class="kw">over</span>(grid_points,state_pg))  <span class="co"># Logical determining points inside all regions </span></a>
+<a class="sourceLine" id="cb8-16" data-line-number="16">    inside_points =<span class="st"> </span>interp_data[in_points, ]        <span class="co"># Removes all points outside of Spatial Polygons</span></a></code></pre></div>
 <p><strong>Plot Spatial Objects with ggplot2</strong></p>
 <p>And finally, build the aesthetics for ggplot2, overlay appt, contour appt concentrations, title plot, and apply border.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">    map_base_aesthetics =<span class="st"> </span><span class="kw">aes</span>(<span class="dt">x=</span>longitude, <span class="dt">y=</span>latitude, <span class="dt">group=</span>group)    <span class="co"># Aesthetics for ggplot2</span></a>
-<a class="sourceLine" id="cb9-2" title="2">    map_base =<span class="st"> </span><span class="kw">geom_polygon</span>(<span class="dt">data=</span>map_base_data, map_base_aesthetics)   <span class="co"># Map Base</span></a>
-<a class="sourceLine" id="cb9-3" title="3">    borders =<span class="st"> </span><span class="kw">geom_polygon</span>(<span class="dt">data=</span>map_base_data,                         <span class="co"># Draws boundaries</span></a>
-<a class="sourceLine" id="cb9-4" title="4">                           map_base_aesthetics, </a>
-<a class="sourceLine" id="cb9-5" title="5">                           <span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="ot">NA</span>)    </a>
-<a class="sourceLine" id="cb9-6" title="6">  </a>
-<a class="sourceLine" id="cb9-7" title="7">    <span class="kw">ggplot</span>(<span class="dt">data=</span>inside_points, <span class="kw">aes</span>(<span class="dt">x=</span>longitude, <span class="dt">y=</span>latitude))  <span class="op">+</span><span class="st">      </span><span class="co"># Setup ggplot2</span></a>
-<a class="sourceLine" id="cb9-8" title="8"><span class="st">      </span><span class="kw">geom_tile</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>APPT)) <span class="op">+</span><span class="st">                                    </span><span class="co"># Initial overlay of appt</span></a>
-<a class="sourceLine" id="cb9-9" title="9"><span class="st">      </span><span class="kw">stat_contour</span>(<span class="kw">aes</span>(<span class="dt">z=</span>APPT)) <span class="op">+</span><span class="st">                                    </span><span class="co"># Create contours for concentrations</span></a>
-<a class="sourceLine" id="cb9-10" title="10"><span class="st">      </span><span class="kw">coord_equal</span>() <span class="op">+</span><span class="st">                                                </span><span class="co"># Equalize plots</span></a>
-<a class="sourceLine" id="cb9-11" title="11"><span class="st">      </span><span class="kw">scale_fill_gradient2</span>(<span class="dt">low=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">mid=</span><span class="st">&quot;white&quot;</span>,<span class="dt">high=</span><span class="st">&quot;darkgreen&quot;</span>, <span class="co"># Set colors for low, mid, high</span></a>
-<a class="sourceLine" id="cb9-12" title="12">                           <span class="dt">midpoint=</span><span class="kw">mean</span>(inside_points<span class="op">$</span>APPT)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb9-13" title="13"><span class="st">      </span><span class="kw">ggtitle</span>(<span class="st">&quot;California Precipitation - 2000&quot;</span>) <span class="op">+</span><span class="st">                  </span><span class="co"># Plot title</span></a>
-<a class="sourceLine" id="cb9-14" title="14"><span class="st">      </span>borders                                                       <span class="co"># Draw California border</span></a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">    map_base_aesthetics =<span class="st"> </span><span class="kw">aes</span>(<span class="dt">x=</span>longitude, <span class="dt">y=</span>latitude, <span class="dt">group=</span>group)    <span class="co"># Aesthetics for ggplot2</span></a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">    map_base =<span class="st"> </span><span class="kw">geom_polygon</span>(<span class="dt">data=</span>map_base_data, map_base_aesthetics)   <span class="co"># Map Base</span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3">    borders =<span class="st"> </span><span class="kw">geom_polygon</span>(<span class="dt">data=</span>map_base_data,                         <span class="co"># Draws boundaries</span></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">                           map_base_aesthetics, </a>
+<a class="sourceLine" id="cb9-5" data-line-number="5">                           <span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">fill=</span><span class="ot">NA</span>)    </a>
+<a class="sourceLine" id="cb9-6" data-line-number="6">  </a>
+<a class="sourceLine" id="cb9-7" data-line-number="7">    <span class="kw">ggplot</span>(<span class="dt">data=</span>inside_points, <span class="kw">aes</span>(<span class="dt">x=</span>longitude, <span class="dt">y=</span>latitude))  <span class="op">+</span><span class="st">      </span><span class="co"># Setup ggplot2</span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8"><span class="st">      </span><span class="kw">geom_tile</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>APPT)) <span class="op">+</span><span class="st">                                    </span><span class="co"># Initial overlay of appt</span></a>
+<a class="sourceLine" id="cb9-9" data-line-number="9"><span class="st">      </span><span class="kw">stat_contour</span>(<span class="kw">aes</span>(<span class="dt">z=</span>APPT)) <span class="op">+</span><span class="st">                                    </span><span class="co"># Create contours for concentrations</span></a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"><span class="st">      </span><span class="kw">coord_equal</span>() <span class="op">+</span><span class="st">                                                </span><span class="co"># Equalize plots</span></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11"><span class="st">      </span><span class="kw">scale_fill_gradient2</span>(<span class="dt">low=</span><span class="st">&quot;blue&quot;</span>, <span class="dt">mid=</span><span class="st">&quot;white&quot;</span>,<span class="dt">high=</span><span class="st">&quot;darkgreen&quot;</span>, <span class="co"># Set colors for low, mid, high</span></a>
+<a class="sourceLine" id="cb9-12" data-line-number="12">                           <span class="dt">midpoint=</span><span class="kw">mean</span>(inside_points<span class="op">$</span>APPT)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb9-13" data-line-number="13"><span class="st">      </span><span class="kw">ggtitle</span>(<span class="st">&quot;California Precipitation - 2000&quot;</span>) <span class="op">+</span><span class="st">                  </span><span class="co"># Plot title</span></a>
+<a class="sourceLine" id="cb9-14" data-line-number="14"><span class="st">      </span>borders                                                       <span class="co"># Draw California border</span></a></code></pre></div>
 <p>image: <img src="images/California_appt.png" alt="California-2000" /></p>
 <p><strong>References</strong></p>
 <p>Thanks to <span class="citation">@kdauria</span> on Stack Exchange for helping with the code for interpolation and countour plots.</p>
@@ -617,23 +629,6 @@ $(document).ready(function () {
 
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
