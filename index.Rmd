@@ -27,7 +27,7 @@ output:
 
 &emsp; My research interests start in environmental economics and extends to information theory and complex systems in data science. Currently, I am exploring illegal, unreported, and unregulated (IUU) events in the oceans to identify anomalous multiscale fleet behavior to detect illegal maritime activities. We are attempting to build an index that detects IUU events in the oceans in near real-time. 
 
-&emsp; I am also interested in the economic impact of climate change on agriculture. Much of my endevours in economics seeks to tie a knot being machine/deep learning methods and improving climate change predictions in economics. Two of my more recent projects include building a Neural Network to predict crop yield and a Recurrent Neural Network to predict commodity prices. 
+&emsp; I am also interested in the economic impact of climate change on agriculture. Much of my endevours in economics seeks to tie a knot between machine/deep learning methods and improving climate change predictions in economics. Two of my more recent projects include building a Neural Network to predict crop yield and a Recurrent Neural Network to predict commodity prices. 
 
 &emsp; [Technical Resume/CV](http://johnwoodill.github.io/images/AJohnWoodill_TR_CV.pdf)
 
