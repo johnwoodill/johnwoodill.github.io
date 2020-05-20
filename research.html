@@ -7,11 +7,12 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>research.utf8</title>
+<title></title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -85,7 +86,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -246,18 +246,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -361,6 +349,8 @@ $(document).ready(function () {
 <div id="peer-reviewed-papers" class="section level2">
 <h2>Peer-reviewed Papers</h2>
 <hr />
+<p>Watson, J. R., &amp; <strong>Woodill, A. J.</strong> (2019). Anticipating Illegal Maritime Activities from Anomalous Multiscale Fleet Behaviors. arXiv preprint</p>
+<p>      arXiv:1910.05424. <a href="https://arxiv.org/abs/1910.05424">[<strong>link</strong>]</a></p>
 <p><strong>Woodill, A. J.</strong>, Nakamoto, S. T., Kawabata, A. M., &amp; Arita, S., Leung, P. (2019). The Impact of CBB on the Economics of Coffee Production in Hawai‘i:</p>
 <p>      2007–2012 USDA Census Analysis. (May), 1-12 Insect Pests. <a href="https://www.ctahr.hawaii.edu/oc/freepubs/pdf/IP-46.pdf">[<strong>link</strong>]</a></p>
 <p><strong>Woodill, A. J.</strong>, Nakamoto, S. T., Kawabata, A. M., &amp; Leung, P. (2017). To Spray or Not to Spray: A Decision Analysis of Coffee Berry Borer in Hawaii.</p>
@@ -373,20 +363,20 @@ $(document).ready(function () {
 <div id="working-papers" class="section level2">
 <h2>Working Papers</h2>
 <hr />
-<div id="under-review-optimal-spraying-and-harvesting-strategies-to-combat-cbb-in-hawaii-a-dynamic-approach" class="section level4">
-<h4>(Under Review) <strong>Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach</strong></h4>
-<p>A. John Woodill, Stuart T. Nakamoto, Andrea Kawabata, and PingSun Leung</p>
-<p>This paper considers optimal decisions coffee farmers make to combat damage from the coffee berry borer in Hawaii. We model the decision to spray or not spray a biological insecticide, Beauveria bassiana, based on the expected damage from not spraying versus the cost to spray. If damages are greater than the cost to spray, then it is beneficial to spray in order to mitigate damage to coffee. To estimate economic damage, we use a Markov-chain to track changes in farm-level infestation level damages temporally. The Markov-chain is incorporated into a dynamic programming model to optimize the net-benefit during a coffee growing season. Results provide an optimal decision path for a coffee growing season and an optimal final net-benefit. Next, we compare our economic model against decisions from integrated pest management strategies and decisions to always spraying or to never spray. Results show our economic model performs best when optimizing net-benefit for a typical farm in Kona Hawaii.</p>
-<ul>
-<li><a href="https://github.com/johnwoodill/cbb-dynamic-model">Replication Content</a></li>
-</ul>
-</div>
 <div id="under-review-anticipating-illegal-maritime-activities-from-anomalous-multiscale-fleet-behaviors" class="section level4">
 <h4>(Under Review) <strong>Anticipating Illegal Maritime Activities from Anomalous Multiscale Fleet Behaviors</strong></h4>
 <p>James R. Watson and A. John Woodill</p>
 <p>Illegal fishing is prevalent throughout the world and heavily impacts the health of our oceans, the sustainability and profitability of fisheries, and even acts to destabilize geopolitical relations. To achieve the United Nations’ Sustainable Development Goal of “Life Below Water”, our ability to detect and predict illegal fishing must improve. Recent advances have been made through the use of vessel location data, however, most analyses to date focus on anomalous spatial behaviors of vessels one at a time. To improve predictions, we develop a method inspired by complex systems theory to monitor the anomalous multi-scale behavior of whole fleets as they respond to nearby illegal activities. Specifically, we analyze changes in the multiscale geospatial organization of fishing fleets operating on the Patagonia Shelf, an important fishing region with chronic exposure to illegal fishing. We show that legally operating (and visible) vessels respond anomalously to nearby illegal activities (by vessels that are difficult to detect). Indeed, precursor behaviors are identified, suggesting a path towards pre-empting illegal activities. This approach offers a promising step towards a global system for detecting, predicting and deterring illegal activities at sea in near real-time. Doing so will be a big step forward to achieving sustainable life underwater.</p>
 <ul>
 <li><a href="https://arxiv.org/abs/1910.05424">arXiv:1910.05424 (PDF)</a></li>
+</ul>
+</div>
+<div id="under-review-optimal-spraying-and-harvesting-strategies-to-combat-cbb-in-hawaii-a-dynamic-approach" class="section level4">
+<h4>(Under Review) <strong>Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach</strong></h4>
+<p>A. John Woodill, Stuart T. Nakamoto, Andrea Kawabata, and PingSun Leung</p>
+<p>This paper considers optimal decisions coffee farmers make to combat damage from the coffee berry borer in Hawaii. We model the decision to spray or not spray a biological insecticide, Beauveria bassiana, based on the expected damage from not spraying versus the cost to spray. If damages are greater than the cost to spray, then it is beneficial to spray in order to mitigate damage to coffee. To estimate economic damage, we use a Markov-chain to track changes in farm-level infestation level damages temporally. The Markov-chain is incorporated into a dynamic programming model to optimize the net-benefit during a coffee growing season. Results provide an optimal decision path for a coffee growing season and an optimal final net-benefit. Next, we compare our economic model against decisions from integrated pest management strategies and decisions to always spraying or to never spray. Results show our economic model performs best when optimizing net-benefit for a typical farm in Kona Hawaii.</p>
+<ul>
+<li><a href="https://github.com/johnwoodill/cbb-dynamic-model">Replication Content</a></li>
 </ul>
 </div>
 <div id="nonlinear-temperature-effects-and-short-run-adaptation-of-the-dust-bowl-region-during-the-1930s" class="section level4">
@@ -442,6 +432,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
