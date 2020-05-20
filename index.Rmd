@@ -23,7 +23,7 @@ output:
 
 <br>
 
-&emsp; I am an interdisciplinary economist with expertise in environmental, resource, agriculture, and fisheries economics, as well as food security, climate change, econometrics, and data science. I also have extensive knowledge in international and macroeconomics, finance, geospatial statistics, earth-system modeling, ecology, biological oceanography, complex systems, information theory, and entomology.
+&emsp; I am an interdisciplinary economist with expertise in environmental, resource, agriculture, and fisheries economics, as well as food security, climate change, econometrics, and data science. I also have extensive knowledge in international and macroeconomics, finance, geospatial statistics, earth-system modeling, ecology, biological oceanography, complex systems, information theory, and entomology. I am currently a Postdoctoral Scholar at Oregon State University working in the [Socio-Environmental Analysis (SEA) Lab](http://jrwatson.ceoas.oregonstate.edu/about/) under the supervision of James R. Watson.
 
 Explore the links at the top of the page to learn more about my interests and experiences.
 
