@@ -7,11 +7,12 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>index.utf8</title>
+<title></title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -85,7 +86,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -246,18 +246,6 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
@@ -360,18 +348,19 @@ $(document).ready(function () {
 <p><link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"></p>
 <p><br> <br></p>
 <center>
-<p><img src="images/circle_portrait.png" /></p>
+<div class="figure">
+<img src="images/portrait.png" />
+
+</div>
 <a href="mailto:johnwoodill@gmail.com"> <i class="fa fa-envelope-square fa-3x"></i></a> <a href="http://johnwoodill.github.io/images/AJohnWoodill_TR_CV.pdf"> <i class="ai ai-cv ai-3x"></i></a> <a href="https://www.linkedin.com/in/a-john-woodill-21475353/"> <i class="fa fa-linkedin-square fa-3x"></i></a> <a href="https://www.github.com/johnwoodill"> <i class="fa fa-git-square fa-3x"></i></a> <a href="https://scholar.google.com/citations?user=FOD51c4AAAAJ&hl=en"> <i class="ai ai-google-scholar-square ai-3x"></i></a>
 </center>
 <p><br></p>
-<p>  I am a post-doctoral scholar at Oregon State University in the College of Earth, Ocean, and Atmospheric Science under the supervision of Dr. James R. Watson. [<a href="http://jrwatson.ceoas.oregonstate.edu/about/">Lab Website</a>]</p>
-<p>  My research interests start in environmental economics and extends to information theory and complex systems in data science. Currently, I am exploring illegal, unreported, and unregulated (IUU) events in the oceans to identify anomalous multiscale fleet behavior to detect illegal maritime activities. We are attempting to build an index that detects IUU events in the oceans in near real-time.</p>
-<p>  I am also interested in the economic impact of climate change on agriculture. Much of my endevours in economics seeks to tie a knot between machine/deep learning methods and improving climate change predictions in economics. Two of my more recent projects include building a Neural Network to predict crop yield and a Recurrent Neural Network to predict commodity prices.</p>
-<p>  <a href="http://johnwoodill.github.io/images/AJohnWoodill_TR_CV.pdf">Technical Resume/CV</a></p>
+<p>  I am an interdisciplinary economist with expertise in environmental, resource, agriculture, and fisheries economics, as well as food security, climate change, econometrics, and data science. I also have extensive knowledge in international and macroeconomics, finance, geospatial statistics, earth-system modeling, ecology, biological oceanography, complex systems, information theory, and entomology.</p>
+<p>  <a href="http://johnwoodill.github.io/images/AJohnWoodill_CV.pdf">Curriculum Vitae</a></p>
+<p>  <a href="http://johnwoodill.github.io/images/AJohnWoodill_TR.pdf">Resume/Technical</a> (incomplete)</p>
 <p>  <a href="https://github.com/johnwoodill/Data-Science-Portfolio">Data Science Portfolio</a></p>
 <p>Explore the links at the top of the page to learn more about my interests and experiences.</p>
 <p>Feel free to contact me through email.</p>
-<p><img src="images/AJohnWoodill_signature.png" /></p>
 <p>A. John Woodill</p>
 <p>johnwoodill [at] gmail.com</p>
 <script>
@@ -402,6 +391,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

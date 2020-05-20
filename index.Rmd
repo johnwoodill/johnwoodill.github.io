@@ -12,7 +12,7 @@ output:
 <br>
 
 <center>
-![](images/circle_portrait.png) 
+![](images/portrait.png) 
 
 <a href="mailto:johnwoodill@gmail.com"> <i class="fa fa-envelope-square fa-3x"></i></a>
 <a href="http://johnwoodill.github.io/images/AJohnWoodill_TR_CV.pdf"> <i class="ai ai-cv ai-3x"></i></a>
@@ -23,21 +23,17 @@ output:
 
 <br>
 
-&emsp; I am a post-doctoral scholar at Oregon State University in the College of Earth, Ocean, and Atmospheric Science under the supervision of Dr. James R. Watson. [[Lab Website](http://jrwatson.ceoas.oregonstate.edu/about/)]
+&emsp; I am an interdisciplinary economist with expertise in environmental, resource, agriculture, and fisheries economics, as well as food security, climate change, econometrics, and data science. I also have extensive knowledge in international and macroeconomics, finance, geospatial statistics, earth-system modeling, ecology, biological oceanography, complex systems, information theory, and entomology.
 
-&emsp; My research interests start in environmental economics and extends to information theory and complex systems in data science. Currently, I am exploring illegal, unreported, and unregulated (IUU) events in the oceans to identify anomalous multiscale fleet behavior to detect illegal maritime activities. We are attempting to build an index that detects IUU events in the oceans in near real-time. 
+&emsp; [Curriculum Vitae](http://johnwoodill.github.io/images/AJohnWoodill_CV.pdf)
 
-&emsp; I am also interested in the economic impact of climate change on agriculture. Much of my endevours in economics seeks to tie a knot between machine/deep learning methods and improving climate change predictions in economics. Two of my more recent projects include building a Neural Network to predict crop yield and a Recurrent Neural Network to predict commodity prices. 
-
-&emsp; [Technical Resume/CV](http://johnwoodill.github.io/images/AJohnWoodill_TR_CV.pdf)
+&emsp; [Resume/Technical](http://johnwoodill.github.io/images/AJohnWoodill_TR.pdf) (incomplete)
 
 &emsp; [Data Science Portfolio](https://github.com/johnwoodill/Data-Science-Portfolio)
 
 Explore the links at the top of the page to learn more about my interests and experiences.
 
 Feel free to contact me through email.
-
-![](images/AJohnWoodill_signature.png)
 
 A. John Woodill
 
