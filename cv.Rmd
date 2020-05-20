@@ -11,19 +11,19 @@ output:
 
 [Download (PDF) ](images/AJohnWoodill_CV.pdf)
 
-![](ttps://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-1.jpg)
+![](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-1.jpg)
 
-![](ttps://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-2.jpg)
-
-
-![](ttps://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-3.jpg)
+![](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-2.jpg)
 
 
-![](ttps://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-4.jpg)
+![](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-3.jpg)
+
+
+![](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-4.jpg)
 
 
 
-![](ttps://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-5.jpg)
+![](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV-5.jpg)
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
