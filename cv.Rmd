@@ -11,7 +11,7 @@ output:
 
 [Download (PDF) ](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV.pdf)
 
-![](images/AJohnWoodill_CV.pdf){width=100% height=1000}
+![Alt](images/AJohnWoodill_CV.pdf){width=100% height=800}
 
 
 
