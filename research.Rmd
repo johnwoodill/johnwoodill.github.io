@@ -11,10 +11,15 @@ output:
 
 
 
-Peer-reviewed Papers
+Research Papers
 ----------------------
 
 *********
+
+**Woodill, A. J.**, Kavanaugh, M., Harte, M., & Watson, J. R. (2020). Predicting Illegal Fishing on the Patagonia Shelf from Oceanographic Seascapes. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   arXiv preprint arXiv:2007.05470v1 [[**link**]](https://arxiv.org/abs/2007.05470) 
+
 
 Watson, J. R., & **Woodill, A. J.** (2019). Anticipating Illegal Maritime Activities from Anomalous Multiscale Fleet Behaviors. arXiv preprint 
 
@@ -43,13 +48,22 @@ Working Papers
 
 *********
 
+#### (Under Review) **Predicting Illegal Fishing on the Patagonia Shelf from Oceanographic Seascapes**
+
+A. John Woodill, Maria Kavanaugh, Michael Harte, and James R. Watson†
+
+Many of the world’s most important fisheries are experiencing increases in illegal fishing, undermining efforts to sustainably conserve and manage fish stocks. A major challenge to ending illegal, unreported, and unregulated (IUU) fishing is improving our ability to identify whether a vessel is fishing illegally and where illegal fishing is likely to occur in the ocean. However, monitoring the oceans is costly, time-consuming, and logistically challenging for maritime authorities to patrol. To address this problem, we use vessel tracking data and machine learning to predict illegal fishing on the Patagonian Shelf, one of the world’s most productive regions for fisheries. Specifically, we focus on Chinese fishing vessels, which have consistently fished illegally in this region. We combine vessel location data with oceanographic seascapes – classes of oceanic areas based on oceanographic variables – as well as other remotely sensed oceanographic variables to train a series of machine learning models of varying levels of complexity. These models are able to predict whether a Chinese vessel is operating illegally with 69-96% confidence, depending on the year and predictor variables used. These results offer a promising step towards preempting illegal activities, rather than reacting to them forensically.
+
+* [arXiv:2007.05470v1  (PDF)](https://arxiv.org/pdf/2007.05470.pdf)
+
+
 #### (Under Review) **Anticipating Illegal Maritime Activities from Anomalous Multiscale Fleet Behaviors**
 
 James R. Watson and A. John Woodill
 
 Illegal fishing is prevalent throughout the world and heavily impacts the health of our oceans, the sustainability and profitability of fisheries, and even acts to destabilize geopolitical relations. To achieve the United Nations' Sustainable Development Goal of "Life Below Water", our ability to detect and predict illegal fishing must improve. Recent advances have been made through the use of vessel location data, however, most analyses to date focus on anomalous spatial behaviors of vessels one at a time. To improve predictions, we develop a method inspired by complex systems theory to monitor the anomalous multi-scale behavior of whole fleets as they respond to nearby illegal activities. Specifically, we analyze changes in the multiscale geospatial organization of fishing fleets operating on the Patagonia Shelf, an important fishing region with chronic exposure to illegal fishing. We show that legally operating (and visible) vessels respond anomalously to nearby illegal activities (by vessels that are difficult to detect). Indeed, precursor behaviors are identified, suggesting a path towards pre-empting illegal activities. This approach offers a promising step towards a global system for detecting, predicting and deterring illegal activities at sea in near real-time. Doing so will be a big step forward to achieving sustainable life underwater.
 
-* [arXiv:1910.05424 (PDF)](https://arxiv.org/abs/1910.05424)
+* [arXiv:1910.05424 (PDF)](https://arxiv.org/pdf/1910.05424.pdf)
 
 
 #### (Under Review) **Optimal spraying and harvesting strategies to combat CBB in Hawaii: A Dynamic Approach**
