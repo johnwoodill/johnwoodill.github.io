@@ -6,9 +6,6 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
-    - text: "Tech. Resume"
-      icon: fa-file
-      href: tech_resume.html
     - text: "CV"
       icon: fa-file
       href: cv.html
