@@ -45,7 +45,9 @@ Richardson, G. M., Bowers, J., **Woodill, A. J.**, Barr, J. R., Gawron, J. M., &
 Patents
 ----------------------
 
-Watson, James R., Woodill, A. John, Kavanaugh, Maria. “An Operational Forecasting System Based On Anomalous Behaviors In Complex Systems.”
+*********
+
+Watson, J. R., **Woodill, A. J.**, Kavanaugh, M. “An Operational Forecasting System Based On Anomalous Behaviors In Complex Systems.”
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; U.S. Patent Application No. 63/027,651 May 20, 2020.
 
