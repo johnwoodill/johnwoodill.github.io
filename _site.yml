@@ -12,12 +12,6 @@ navbar:
     - text: "Research"
       icon: fa-globe
       href: research.html
-    - text: "Portfolio/Projects"
-      icon: fa-globe
-      href: https://github.com/johnwoodill/Data-Science-Portfolio\
-    - text: "Blog"
-      icon: fa-pencil
-      href: http://johnwoodill.blogspot.com
     - text: "hub"
       icon: fa-git
       href: http://www.github.com/johnwoodill/

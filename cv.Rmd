@@ -9,7 +9,7 @@ output:
 
 <br>
 
-[Download (PDF) ](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/AJohnWoodill_CV.pdf)
+[Download (PDF) ](https://www.dropbox.com/s/ml6bs9wtbemr7zc/AJohnWoodill_CV.pdf?dl=1)
 
 ![Alt](images/AJohnWoodill_CV.pdf){width=100% height=800}
 
