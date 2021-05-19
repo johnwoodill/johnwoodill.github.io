@@ -16,14 +16,13 @@ Research Papers
 
 *********
 
-**Woodill, A. J.**, Kavanaugh, M., Harte, M., & Watson, J. R. (2020). Predicting Illegal Fishing on the Patagonia Shelf from Oceanographic Seascapes. 
+**Woodill, A. J.**, Kavanaugh, M., Harte, M., & Watson, J. R. (2021). Ocean seascapes predict distant‐water fishing vessel incursions into 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   arXiv preprint arXiv:2007.05470v1 [[**link**]](https://arxiv.org/abs/2007.05470) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exclusive economic zones. Fish and Fisheries. [[**link**]](https://arxiv.org/abs/2007.05470) 
 
 
-Watson, J. R., & **Woodill, A. J.** (2019). Anticipating Illegal Maritime Activities from Anomalous Multiscale Fleet Behaviors. arXiv preprint 
+**Woodill, A. J.**, Nakamoto, S. T., Kawabata, A. M., & Arita, S., Leung, P. (2021). Optimal spraying strategy to combat the coffee berry borer: A dynamic approach. Journal of Food and Agriculture Research. [[**link**]](https://arxiv.org/abs/2007.05470) 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   arXiv:1910.05424. [[**link**]](https://arxiv.org/abs/1910.05424)
 
 **Woodill, A. J.**, Nakamoto, S. T., Kawabata, A. M., & Arita, S., Leung, P. (2019). The Impact of CBB on the Economics of Coffee Production in Hawai‘i: 
 

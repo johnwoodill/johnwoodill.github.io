@@ -23,9 +23,7 @@ output:
 
 <br>
 
-&emsp; I am an interdisciplinary economist with expertise in environmental, resource, agriculture, and fisheries economics, as well as food security, climate change, econometrics, and data science. I also have extensive knowledge in international and macroeconomics, finance, geospatial statistics, earth-system modeling, ecology, biological oceanography, complex systems, information theory, and entomology. I am currently a Postdoctoral Scholar at Oregon State University working in the [Socio-Environmental Analysis (SEA) Lab](http://jrwatson.ceoas.oregonstate.edu/about/) under the supervision of James R. Watson.
-
-Explore the links at the top of the page to learn more about my interests and experiences.
+&emsp; I am an interdisciplinary Environmental Economist that brings a multi-faceted approach to solving large-scale environmental issues. Before pursuing an academic career as an economist, I served in the United States Air Force as a Civil Engineer. I have worked in and out of warzones deploying forward operating base support for airfields and hospitals with international coalition forces. After separating from the Air Force, I pursued academics and received a PhD in Economics from the University of Hawai’i where I studied the economic impact of climate change on US agriculture. I am currently a Postdoctoral Scholar at Oregon State University working in the [Socio-Environmental Analysis (SEA) Lab](http://jrwatson.ceoas.oregonstate.edu/about/)  under the supervision of James R. Watson at the College of Earth, Ocean, and Atmospheric Sciences. I use advanced analytics in computer science and econometrics to address tough environmental problems that span several disciplines, such as resource, agriculture, and fisheries economics, complex systems, oceanography, earth-systems, ecology, and entomology.  When I am not prototyping new models, I enjoy catching an early morning surf, a round of golf when the surf is flat, going for a long run, or playing improvised music.
 
 Feel free to contact me through email.
 
