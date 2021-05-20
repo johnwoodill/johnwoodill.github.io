@@ -1,5 +1,5 @@
 ---
-title: ""
+pagetitle: "A. John Woodill - Home Page"
 output:
   html_document:
     toc: true

@@ -1,5 +1,5 @@
 ---
-title: ""
+pagetitle: "A. John Woodill - Research"
 output:
   html_document:
     theme: sandstone
