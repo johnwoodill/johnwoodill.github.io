@@ -11,26 +11,40 @@
 
 
 
-<title>projects.utf8</title>
+<title>projects.knit</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -43,32 +57,8 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
+
 
 
 
@@ -78,10 +68,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -98,40 +84,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 61px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h2 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h3 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h4 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h5 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
-.section h6 {
-  padding-top: 66px;
-  margin-top: -66px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -159,7 +121,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -171,7 +133,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -181,11 +143,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -197,13 +176,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -211,16 +189,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -264,7 +235,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -316,7 +287,7 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
@@ -330,33 +301,91 @@ $(document).ready(function () {
 <hr />
 </div>
 <div id="fine-scale-weather-data-from-1900-2013" class="section level2">
-<h2><strong><a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Fine Scale Weather Data from 1900-2013</a></strong></h2>
-<p><img src="https://img.shields.io/R/v3.2.3.png?color=red" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
+<h2><strong><a
+href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Fine
+Scale Weather Data from 1900-2013</a></strong></h2>
+<p><img src="https://img.shields.io/R/v3.2.3.png?color=red" /> <img
+src="https://img.shields.io/license/MIT.png?color=blue" /></p>
 <hr />
-<p><a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Project Link:</a></p>
+<p><a
+href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation">Project
+Link:</a></p>
 </div>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p>Standard measures of weather include minimum, maximum, and average temperatures for a given day, month, or year. However, throughout a day the temperature rises and falls, which standard measures are not able to capture due to the linear nature of the measurement. To estimate the nonlinear relationship in a day, I utilize an integrated sine approach to calculate degree days and time in each degree. These measures provide better covariates for explaining the effect of weather on various estimators (crop yield).</p>
-<p>Degree days and time in each degree provides a measure of looking at temperature effects during the day. Degree days can be defined as the amount of time during a day that the environment is exposed to a threshold of temperature. For example, suppose for half of the day it is 30C. A simple calculation of degree days above 25°C would involve 5 degrees for half of a day, so for that particular day the degree days above 25°C would be 2.5. The exposure during the day becomes longer as it becomes warmer or shorter if it is cooler. Time in each degree is similiar in definition, but instead each degree gets a time interval. Time in each degree is defined as the length of heat exposure to each one-degree Celsisus temperature interval in each day. (See Synyder 1985)</p>
-<p>Daily minimum and maximum weather data is needed in order to calculate these two variables. More importantly, gridded data (2.5 x 2.5 miles) provides an accurate relationship to regions and are generally thought of as more precise than using zip codes. This data is not available for the suggested time period so an interpolation technique is used to get to daily data using monthly data. Calculations of degree days and time in each degree can then be extracted using the necessary mathmatical technique.</p>
-<p>Using daily data available from the National Climatic Data Center (NCDC: <a href="http://www.ncdc.noaa.gov/" class="uri">http://www.ncdc.noaa.gov/</a>) for various weather stations and PRISM (<a href="http://www.prism.oregonstate.edu/" class="uri">http://www.prism.oregonstate.edu/</a>) data that provides monthly data on a grid a relatively anomaly spline interpolation technique is used to build fine scale weather data on a 2.5 x 2.5 mile grid scale.</p>
-<p>The main idea behind building gridded data is to use the monthly temperatures from PRISM, place them at the midpoint (15th day) of each month for each year, and run a spline through each midpoint for each month of each day for each grid. This will in turn produce fine scale gridded daily data. Next, find the relative anamoly where R = NCDC(month) / PRISM(month). Finally, use Inverse Distance Weighting (IDW) to find the 5 closest NCDC stations for each PRISM grid to weight the temperature changes and apply the relative anamoly to this weighted temperature. This will produce gridded 2.5 x 2.5 mile daily data that is between the PRISM and NCDC data. For a simplegit example in R see <a href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation/raw/master/Documentation/interpolation_technique.pdf">Interpolation Technique</a></p>
+<p>Standard measures of weather include minimum, maximum, and average
+temperatures for a given day, month, or year. However, throughout a day
+the temperature rises and falls, which standard measures are not able to
+capture due to the linear nature of the measurement. To estimate the
+nonlinear relationship in a day, I utilize an integrated sine approach
+to calculate degree days and time in each degree. These measures provide
+better covariates for explaining the effect of weather on various
+estimators (crop yield).</p>
+<p>Degree days and time in each degree provides a measure of looking at
+temperature effects during the day. Degree days can be defined as the
+amount of time during a day that the environment is exposed to a
+threshold of temperature. For example, suppose for half of the day it is
+30C. A simple calculation of degree days above 25°C would involve 5
+degrees for half of a day, so for that particular day the degree days
+above 25°C would be 2.5. The exposure during the day becomes longer as
+it becomes warmer or shorter if it is cooler. Time in each degree is
+similiar in definition, but instead each degree gets a time interval.
+Time in each degree is defined as the length of heat exposure to each
+one-degree Celsisus temperature interval in each day. (See Synyder
+1985)</p>
+<p>Daily minimum and maximum weather data is needed in order to
+calculate these two variables. More importantly, gridded data (2.5 x 2.5
+miles) provides an accurate relationship to regions and are generally
+thought of as more precise than using zip codes. This data is not
+available for the suggested time period so an interpolation technique is
+used to get to daily data using monthly data. Calculations of degree
+days and time in each degree can then be extracted using the necessary
+mathmatical technique.</p>
+<p>Using daily data available from the National Climatic Data Center
+(NCDC: <a href="http://www.ncdc.noaa.gov/"
+class="uri">http://www.ncdc.noaa.gov/</a>) for various weather stations
+and PRISM (<a href="http://www.prism.oregonstate.edu/"
+class="uri">http://www.prism.oregonstate.edu/</a>) data that provides
+monthly data on a grid a relatively anomaly spline interpolation
+technique is used to build fine scale weather data on a 2.5 x 2.5 mile
+grid scale.</p>
+<p>The main idea behind building gridded data is to use the monthly
+temperatures from PRISM, place them at the midpoint (15th day) of each
+month for each year, and run a spline through each midpoint for each
+month of each day for each grid. This will in turn produce fine scale
+gridded daily data. Next, find the relative anamoly where R =
+NCDC(month) / PRISM(month). Finally, use Inverse Distance Weighting
+(IDW) to find the 5 closest NCDC stations for each PRISM grid to weight
+the temperature changes and apply the relative anamoly to this weighted
+temperature. This will produce gridded 2.5 x 2.5 mile daily data that is
+between the PRISM and NCDC data. For a simplegit example in R see <a
+href="https://github.com/johnwoodill/Fine-Scale-Weather-Interpolation/raw/master/Documentation/interpolation_technique.pdf">Interpolation
+Technique</a></p>
 <p><br> <br></p>
 <hr />
 </div>
 <div id="r-package-nonlineartempr" class="section level2">
-<h2><strong><a href="https://github.com/johnwoodill/nonlineartempr">R-package: nonlineartempr</a></strong></h2>
+<h2><strong><a
+href="https://github.com/johnwoodill/nonlineartempr">R-package:
+nonlineartempr</a></strong></h2>
 <hr />
-<p><img src="https://img.shields.io/R/v3.4.3.png?color=red" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
-<p><a href="https://github.com/johnwoodill/nonlineartempr">Project Link:</a></p>
+<p><img src="https://img.shields.io/R/v3.4.3.png?color=red" /> <img
+src="https://img.shields.io/license/MIT.png?color=blue" /></p>
+<p><a href="https://github.com/johnwoodill/nonlineartempr">Project
+Link:</a></p>
 </div>
 <div id="overview-1" class="section level2">
 <h2>Overview</h2>
-<p><code>nonlineartempr</code> calculates nonlinear temperature distributions using an integrated sine technique. Degree days define time above a specified temperature threshold (e.g. degree days above 30C) and time in each degree define time within a specified temperature threshold (e.g. time in 30C).</p>
+<p><code>nonlineartempr</code> calculates nonlinear temperature
+distributions using an integrated sine technique. Degree days define
+time above a specified temperature threshold (e.g. degree days above
+30C) and time in each degree define time within a specified temperature
+threshold (e.g. time in 30C).</p>
 <ul>
-<li><code>degree_days()</code>: calculates degree days within a specified thresholds</li>
-<li><code>degree_time()</code>: calculates time in each degree at one degree intervals within a specified thresholds.</li>
+<li><code>degree_days()</code>: calculates degree days within a
+specified thresholds</li>
+<li><code>degree_time()</code>: calculates time in each degree at one
+degree intervals within a specified thresholds.</li>
 </ul>
 </div>
 <div id="installation" class="section level2">
@@ -415,19 +444,30 @@ head(td_napa)
 <hr />
 </div>
 <div id="python-package-nonlineartemppy" class="section level2">
-<h2><strong><a href="https://github.com/johnwoodill/nonlineartemppy">python-package: nonlineartemppy</a></strong></h2>
+<h2><strong><a
+href="https://github.com/johnwoodill/nonlineartemppy">python-package:
+nonlineartemppy</a></strong></h2>
 <hr />
 </div>
 <div id="nonlineartemppy" class="section level2">
 <h2>nonlineartemppy</h2>
-<p><img src="https://img.shields.io/pypi/v0.101.png?color=brightgreen" /> <img src="https://img.shields.io/python/v3.6.png?color=blue" /> <img src="https://img.shields.io/license/MIT.png?color=blue" /></p>
+<p><img
+src="https://img.shields.io/pypi/v0.101.png?color=brightgreen" /> <img
+src="https://img.shields.io/python/v3.6.png?color=blue" /> <img
+src="https://img.shields.io/license/MIT.png?color=blue" /></p>
 </div>
 <div id="overview-2" class="section level2">
 <h2>Overview</h2>
-<p><code>nonlineartemppy</code> calculates nonlinear temperature distributions using an integrated sine technique. Degree days define time above a specified temperature threshold (e.g. degree days above 30C) and time in each degree define time within a specified temperature threshold (e.g. time in 30C).</p>
+<p><code>nonlineartemppy</code> calculates nonlinear temperature
+distributions using an integrated sine technique. Degree days define
+time above a specified temperature threshold (e.g. degree days above
+30C) and time in each degree define time within a specified temperature
+threshold (e.g. time in 30C).</p>
 <ul>
-<li><code>degree_days()</code>: calculates degree days within a specified thresholds</li>
-<li><code>degree_time()</code>: calculates time in each degree at one degree intervals within a specified thresholds.</li>
+<li><code>degree_days()</code>: calculates degree days within a
+specified thresholds</li>
+<li><code>degree_time()</code>: calculates time in each degree at one
+degree intervals within a specified thresholds.</li>
 </ul>
 </div>
 <div id="installation-1" class="section level2">
@@ -507,7 +547,7 @@ td_napa.head()
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -525,7 +565,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
