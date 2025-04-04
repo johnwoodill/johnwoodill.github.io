@@ -23,11 +23,39 @@ output:
 
 <br>
 
-&emsp; I am an interdisciplinary Environmental Economist that brings a multi-faceted approach to solving large-scale environmental issues. Before pursuing an academic career as an Economist, I served in the United States Air Force as a Civil Engineer. I have worked in-and-out of warzones, deploying to forward operating bases to support airfields and hospitals with international coalition forces. After separating from the Air Force, I pursued academics and received a PhD in Economics from the University of Hawai’i where I studied the economic impact of climate change on US agriculture. 
+<p>I am an interdisciplinary Environmental Economist working at the intersection of research, consulting, and applied technology. I split my time between academic research and consulting/startup work, using data science, economics, and AI to address climate and sustainability challenges. My background includes a PhD in Economics, prior service as a U.S. Air Force Civil Engineer, and years of experience working across a variety of disciplines.</p>
 
-&emsp; I am currently a Research Associate at Oregon State University working in the [Socio-Environmental Analysis (SEA) Lab](http://jrwatson.ceoas.oregonstate.edu/about/)  under the supervision of James R. Watson in the College of Earth, Ocean, and Atmospheric Sciences. I use advanced analytics in computer science and econometrics to address complex environmental problems that span several disciplines, such as resource, agriculture, and fisheries economics, complex systems, oceanography, earth-systems, ecology, and entomology.  
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
+  <div style="flex: 1; min-width: 300px;">
+    <h3>Academic Work</h3>
+    <ul>
+      <li>PhD in Economics – University of Hawai’i</li>
+      <li>Research Associate at Oregon State University, <a href="http://jrwatson.ceoas.oregonstate.edu/about/" target="_blank">SEA Lab</a></li>
+      <li>Specializes in environmental and resource economics</li>
+      <li>Integrates computer and data science, econometrics, and earth system modeling</li>
+      <li>Leads interdisciplinary research spanning environmental/agriculture economics, oceanography, and data science.</li>
+      <li>Develops and calibrates computational models to analyze environmental systems and decision-making</li>
+    </ul>
+  </div>
 
-&emsp; When I am not prototyping new models, I enjoy catching an early morning surf, a round of golf when the surf is flat, a long run with an interesting podcast, or playing improvised music.
+  <div style="flex: 1; min-width: 300px;">
+    <h3>Consulting, Startups, and AI</h3>
+    <ul>
+      <li>Consultant for climate tech, carbon sequestration, and ag-environmental firms</li>
+      <li>Develops AI and geospatial tools for monitoring and impact evaluation</li>
+      <li>Startup co-founder and advisor focused on educational AI and environmental modeling</li>
+      <li>Builds machine learning pipelines for land use, crop classification, and emissions tracking</li>
+      <li>Leads LCA and economic modeling for innovative sustainability ventures</li>
+      <li>Specializes in high-performance computing, APIs, and real-world deployment</li>
+    </ul>
+  </div>
+</div>
+<br>
+<p>When I am not prototyping new models, I enjoy catching an early morning surf, a long run with an interesting podcast, or playing improvised music.</p>
+
+<p>Feel free to contact me through email.</p>
+<p>A. John Woodill</p>
+<p>johnwoodill [at] gmail.com</p>
 
 
 
