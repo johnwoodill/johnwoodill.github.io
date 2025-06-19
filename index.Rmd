@@ -6,50 +6,54 @@ output:
     theme: sandstone
     highlight: default
 ---
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 
 <br>
 <br>
 
-<center>
-![](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/John-headshot.png) 
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/John-headshot.png" width="225" height="350"/>
+  <br><br>
+  <a href="mailto:johnwoodill@gmail.com"><i class="fa fa-envelope-square fa-3x" style="margin: 0 10px;"></i></a>
+  <a href="http://johnwoodill.github.io/cv.html"><i class="ai ai-cv ai-3x" style="margin: 0 10px;"></i></a>
+  <a href="https://www.linkedin.com/in/a-john-woodill-21475353/"><i class="fa fa-linkedin-square fa-3x" style="margin: 0 10px;"></i></a>
+  <a href="https://www.github.com/johnwoodill"><i class="fa fa-git-square fa-3x" style="margin: 0 10px;"></i></a>
+  <a href="https://scholar.google.com/citations?user=FOD51c4AAAAJ&hl=en"><i class="ai ai-google-scholar-square ai-3x" style="margin: 0 10px;"></i></a>
+</div>
 
-<a href="mailto:johnwoodill@gmail.com"> <i class="fa fa-envelope-square fa-3x"></i></a>
-<a href="http://johnwoodill.github.io/cv.html"> <i class="ai ai-cv ai-3x"></i></a>
-<a href="https://www.linkedin.com/in/a-john-woodill-21475353/"> <i class="fa fa-linkedin-square fa-3x"></i></a>
-<a href="https://www.github.com/johnwoodill"> <i class="fa fa-git-square fa-3x"></i></a>
-<a href="https://scholar.google.com/citations?user=FOD51c4AAAAJ&hl=en"> <i class="ai ai-google-scholar-square ai-3x"></i></a>
-</center>
 
 <br>
 
 <p>I am an interdisciplinary Environmental Economist working at the intersection of research, consulting, and applied technology. I split my time between academic research and consulting/startup work, using data science, economics, and AI to address climate and sustainability challenges. My background includes a PhD in Economics, prior service as a U.S. Air Force Civil Engineer, and years of experience working across a variety of disciplines.</p>
 
-<div style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;">
-  <div style="flex: 1; min-width: 300px;">
-    <h3>Academic Work</h3>
-    <ul>
-      <li>PhD in Economics – University of Hawai’i</li>
-      <li>Research Associate at Oregon State University, <a href="http://jrwatson.ceoas.oregonstate.edu/about/" target="_blank">SEA Lab</a></li>
-      <li>Specializes in environmental and resource economics</li>
-      <li>Integrates computer and data science, econometrics, and earth system modeling</li>
-      <li>Leads interdisciplinary research spanning environmental/agriculture economics, oceanography, and data science.</li>
-      <li>Develops and calibrates computational models to analyze environmental systems and decision-making</li>
-    </ul>
-  </div>
+<table style="width: 100%; table-layout: fixed;">
+  <tr>
+    <td style="vertical-align: top; padding-right: 20px;">
+      <h3>Academic Work</h3>
+      <ul>
+        <li>PhD in Economics – University of Hawai’i</li>
+        <li>Research Associate at Oregon State University, <a href="http://jrwatson.ceoas.oregonstate.edu/about/" target="_blank">SEA Lab</a></li>
+        <li>Specializes in environmental and resource economics</li>
+        <li>Integrates computer and data science, econometrics, and earth system modeling</li>
+        <li>Leads interdisciplinary research spanning environmental/agriculture economics, oceanography, and data science.</li>
+        <li>Develops and calibrates computational models to analyze environmental systems and decision-making</li>
+      </ul>
+    </td>
+    <td style="vertical-align: top; padding-left: 20px;">
+      <h3>Consulting, Startups, and AI</h3>
+      <ul>
+        <li>Consultant for climate tech, carbon sequestration, and ag-environmental firms</li>
+        <li>Develops AI and geospatial tools for monitoring and impact evaluation</li>
+        <li>Startup co-founder and advisor focused on educational AI and environmental modeling</li>
+        <li>Builds machine learning pipelines for land use, crop classification, and emissions tracking</li>
+        <li>Leads LCA and economic modeling for innovative sustainability ventures</li>
+        <li>Specializes in high-performance computing, APIs, and real-world deployment</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-  <div style="flex: 1; min-width: 300px;">
-    <h3>Consulting, Startups, and AI</h3>
-    <ul>
-      <li>Consultant for climate tech, carbon sequestration, and ag-environmental firms</li>
-      <li>Develops AI and geospatial tools for monitoring and impact evaluation</li>
-      <li>Startup co-founder and advisor focused on educational AI and environmental modeling</li>
-      <li>Builds machine learning pipelines for land use, crop classification, and emissions tracking</li>
-      <li>Leads LCA and economic modeling for innovative sustainability ventures</li>
-      <li>Specializes in high-performance computing, APIs, and real-world deployment</li>
-    </ul>
-  </div>
-</div>
 <br>
 <p>When I am not prototyping new models, I enjoy catching an early morning surf, a long run with an interesting podcast, or playing improvised music.</p>
 
