@@ -12,7 +12,7 @@ output:
 <br>
 
 <center>
-![](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/portrait.png) 
+![](https://raw.githubusercontent.com/johnwoodill/johnwoodill.github.io/master/images/John-headshot.png) 
 
 <a href="mailto:johnwoodill@gmail.com"> <i class="fa fa-envelope-square fa-3x"></i></a>
 <a href="http://johnwoodill.github.io/cv.html"> <i class="ai ai-cv ai-3x"></i></a>
